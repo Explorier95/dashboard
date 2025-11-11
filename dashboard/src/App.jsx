@@ -1,9 +1,12 @@
-import { motion, useScroll, useAnimation, useTransform, useInView } from "framer-motion";
+import { motion, useAnimation, useTransform, useInView, useScroll } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import CircleSquareFade from "./circleSquareFade";
-import ResponsiveButton from "./responsiveButton";
-import { GridContainerVariants } from "./variants";
-import StudentOverview from "./studentOverview";
+import CircleSquareFade from "./components/circleSquareFade";
+import ResponsiveButton from "./components/responsiveButton";
+import { GridContainerVariants } from "./components/variants";
+import StudentOverview from "./components/studentOverview";
+import InfinitySquare from "./components/infinitySquare";
+import SlidingSquare from "./components/slidingSquare";
+import ScrollingIndicator from "./components/scrollingIndicator"
 //import {TemplateLoader} from "./templateLoader";
 //import Table from "./table";
 
@@ -23,13 +26,13 @@ const svgIconVariants = {
 
 const App = () => {
 
-  const { scrollYProgress: completionProgress } = useScroll();
 
   const containerRef = useRef(null)
 
   const mainControls = useAnimation();
 
   const isInView = useInView(containerRef, { once: true })
+
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -58,35 +61,24 @@ const App = () => {
         initial="hidden"
         animate="show"
         className="grid grid-cols-3 p-10 gap-10"
+
       > {/* Importet Component */}
-        <CircleSquareFade/>
+        <CircleSquareFade
+        title="A Square and a Circle"
+        />
 
-        <motion.div variants={{GridContainerVariants}}className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10">
-          <motion.div
-            className="w-1/3 h-1/3 shadow-md bg-rose-400" animate={{
-              scale: [1, 2, 2, 1], rotate: [0, 90, 90, 0],
-              borderRadius: ["10%", "10%", "50%", "10%"]
-            }}
-            transition={{ duration: 5, ease: 'easeInOut', repeat: Infinity, repeatDelay: 1 }}
-          />
+         {/* Importet Component */}
+        <InfinitySquare/>
 
-        </motion.div>
+
         {/* Importet Component */}
         <ResponsiveButton/>
-        <motion.div variants={{GridContainerVariants}} className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10">
-          <motion.div className="w-1/3 h-1/3 bg-orange-500 rounded-3xl cursor-grab"
-            drag
-            dragConstraints={{ top: -125, left: -125, right: 125, bottom: 125 }}
-            dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
-          />
-        </motion.div>
-        <motion.div variants={{GridContainerVariants}} className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10">
-          <motion.div className="w-40 aspect-square bg-gray-50/20 rounded-xl">
-            <motion.div className="w-full bg-gray-400 rounded-xl h-full origin-bottom"
-              style={{ scaleY: completionProgress }} />
 
-          </motion.div>
-        </motion.div>
+        {/* Importet Component */}
+        <SlidingSquare/>
+
+        <ScrollingIndicator/>
+
         <motion.div variants={{GridContainerVariants}} className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10">
           <motion.svg
             xmln="http://www.w3.org/2000/svg"
