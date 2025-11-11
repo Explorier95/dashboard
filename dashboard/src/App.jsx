@@ -51,35 +51,48 @@ const App = () => {
     }
   }, [isInView])
 
+  const titleElements = ["Tobias", "Holger", "Gert", "Hugo"];
+  const [title, setTitle] = useState("Noch nicht geklickt!") // Startwert
+
+  function handleSelect() {
+    const randomIndex = Math.floor(Math.random() * titleElements.length)
+    setTitle(titleElements[randomIndex])
+    console.log("Button clicked! New title:", titleElements[randomIndex]);
+  }
+
 
   return (
     <div className="flex flex-col gap-10 overflow-x-hidden">
       <h1 className="text-5xl trackingwide text-slate-100 text-center">IPN-Dashboard</h1>
       <p className="text-2xl text-white text-center "> Welcome to the IPN Dashboard</p>
       <motion.section
-        variants={{GridContainerVariants}}
+        variants={{ GridContainerVariants }}
         initial="hidden"
         animate="show"
         className="grid grid-cols-3 p-10 gap-10"
 
       > {/* Importet Component */}
         <CircleSquareFade
-        title="A Square and a Circle"
+          title="A Square and a Circle"
         />
 
-         {/* Importet Component */}
-        <InfinitySquare/>
+        {/* Importet Component */}
+        <InfinitySquare />
 
 
         {/* Importet Component */}
-        <ResponsiveButton/>
+        <div id="responsiveButtonTitle">
+          <h2 className="text-slate-100 font-thin text-1xl w-1/2 mx-auto text-center">{title}</h2>
+          <ResponsiveButton onSelect={handleSelect}>Klick Mich!</ResponsiveButton>
+        </div>
+
 
         {/* Importet Component */}
-        <SlidingSquare/>
+        <SlidingSquare />
 
-        <ScrollingIndicator/>
+        <ScrollingIndicator />
 
-        <motion.div variants={{GridContainerVariants}} className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10">
+        <motion.div variants={{ GridContainerVariants }} className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10">
           <motion.svg
             xmln="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -120,12 +133,12 @@ const App = () => {
         </motion.p>
       </section>
       <motion.section
-        variants={{GridContainerVariants}}
+        variants={{ GridContainerVariants }}
         initial="hidden"
         animate="show"
         className="grid grid-cols-2 p-10 gap-10"
       >{/* Dashboard Section */}
-       <StudentOverview/>
+        <StudentOverview />
       </motion.section>
     </div>
   );
