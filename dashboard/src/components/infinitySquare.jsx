@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { GridContainerVariants } from "./variants";
 
-function InfinitySquare() {
+function InfinitySquare(props) {
   return (
+    <div>
+    <h2 className="text-slate-100 font-thin text-1xl w-1/2 mx-auto text-center">{props.title}</h2>
     <motion.div variants={{ GridContainerVariants }} className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10">
       <motion.div
         className="w-1/3 h-1/3 shadow-md bg-rose-400" animate={{
@@ -13,6 +15,7 @@ function InfinitySquare() {
       />
 
     </motion.div>
+    </div>
   )
 }
 

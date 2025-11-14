@@ -1,0 +1,99 @@
+{
+  "schueler": [
+    { "id": 1, "vorname": "Raphael", "n_total_correct": null },
+    { "id": 2, "vorname": "Kim", "n_total_correct": null },
+    { "id": 3, "vorname": "Maria", "n_total_correct": null },
+    { "id": 4, "vorname": "Otto", "n_total_correct": null }
+  ],
+  "fragen": [
+    { "nmbr": 1, "title": "Wie ist eine Kohlenstoffdioxidquelle definiert?" },
+    { "nmbr": 2, "title": "Was passiert mit Kohlenstoffdioxid, wenn es in kaltes Meerwasser gelangt?" },
+    { "nmbr": 3, "title": "Was geschieht mit Kalksteinablagerungen, die an die Erdoberfläche verschoben werden?" }
+  ],
+
+  "schueler_antworten": [
+    { "id": 1, "schueler_id": 1, "frage_nmbr": 1, "student_text": "sie gibt mehr Kohlenstoff abm als sie aufnimmt", "is_correct": true, "under_help": false },
+    { "id": 2, "schueler_id": 1, "frage_nmbr": 2, "student_text": "es wird zu carbonat", "is_correct": null, "under_help": false },
+    { "id": 3, "schueler_id": 1, "frage_nmbr": 3, "student_text": "wenn kohlensäurehaltiger Regen kommt löst es sich", "is_correct": null, "under_help": false },
+
+    { "id": 4, "schueler_id": 2, "frage_nmbr": 1, "student_text": "Sie besteht aus Sauerstoff und einem anderen Stoff", "is_correct": false, "under_help": true },
+    { "id": 5, "schueler_id": 2, "frage_nmbr": 2, "student_text": "dann wird es zu Sauerstoff", "is_correct": true, "under_help": false },
+    { "id": 6, "schueler_id": 2, "frage_nmbr": 3, "student_text": "Sie werden zu Kohle", "is_correct": false, "under_help": false },
+
+    { "id": 7, "schueler_id": 3, "frage_nmbr": 1, "student_text": "Eine Kohlenstoffdioxidquelle befindet sich am wärmsten Bereich eines Meeres oder Ozeans. Hier wird mehr Kohlenstoff ausgestoßen als aufgenommen.", "is_correct": null, "under_help": false },
+    { "id": 8, "schueler_id": 3, "frage_nmbr": 2, "student_text": "es wird zu einem gestein", "is_correct": true, "under_help": true },
+    { "id": 9, "schueler_id": 3, "frage_nmbr": 3, "student_text": "sie werden zu einer schicht der Litosphgere", "is_correct": true, "under_help": false },
+
+    { "id": 10, "schueler_id": 4, "frage_nmbr": 1, "student_text": "Eine Kohlenstoffdioxidquelle ist ein Ort, an dem Kohlenstoffdioxid in die Atmosphäre freigesetzt wird, z.B. durch Vulkane oder Verbrennung fossiler Brennstoffe.", "is_correct": true, "under_help": false },
+    { "id": 11, "schueler_id": 4, "frage_nmbr": 2, "student_text": "Im kalten Meerwasser löst sich das Kohlenstoffdioxid und kann von Meeresorganismen aufgenommen werden.", "is_correct": true, "under_help": false },
+    { "id": 12, "schueler_id": 4, "frage_nmbr": 3, "student_text": "Kalksteinablagerungen verwittern durch den Einfluss von Kohlensäure im Regenwasser und tragen zur Bildung von Karstlandschaften bei.", "is_correct": false, "under_help": false }
+  ],
+
+  "tutor_assessments": [
+    {
+      "id": 1,
+      "schueler_id": 1,
+      "frage_nmbr": 1,
+      "tutor_text": "Du hast richtig erkannt, dass es um das Verhältnis von Abgabe und Aufnahme geht. Überlege nochmal, worauf sich das „mehr“ genau bezieht. Versuch, deine Antwort noch etwas genauer zu formulieren! Probier's gleich nochmal!",
+      "evaluation": "partly"
+    },
+    {
+      "id": 2,
+      "schueler_id": 1,
+      "frage_nmbr": 2,
+      "tutor_text": "Du hast richtig erkannt, dass Kohlenstoffdioxid im Wasser umgewandelt werden kann. Überlege aber noch einmal, was der allererste Schritt ist, wenn das Gas ins Meerwasser gelangt. Versuch es noch einmal!",
+      "evaluation": "partly"
+    },
+    {
+      "id": 3,
+      "schueler_id": 1,
+      "frage_nmbr": 3,
+      "tutor_text": "Du hast richtig erkannt, dass Regen eine Rolle spielt! Überleg mal, was genau für Stoffe im Regen enthalten sein könnten und wie sie mit Kalkstein reagieren. Versuch, deine Antwort nochmal zu präzisieren!",
+      "evaluation": "partly"
+    },
+
+    {
+      "id": 4,
+      "schueler_id": 2,
+      "frage_nmbr": 1,
+      "tutor_text": "Deine Antwort bezieht sich auf den Aufbau von Kohlenstoffdioxid, beantwortet aber nicht, was eine Kohlenstoffdioxidquelle ist. Versuche noch einmal zu erklären, was unter einer Quelle verstanden wird. A: mehr Abgabe als Aufnahme; B: weniger; C: nur Aufnahme; D: Bereiche der Atmosphäre mit mehr Abgabe.",
+      "evaluation": "incorrect"
+    },
+    {
+      "id": 5,
+      "schueler_id": 2,
+      "frage_nmbr": 2,
+      "tutor_text": "Deine Antwort ist leider nicht richtig. Kohlenstoffdioxid wird im Meerwasser nicht direkt zu Sauerstoff. A: Es löst sich; B: verbindet sich mit Sauerstoff; C: entweicht sofort wieder; D: wird zu Glukose.",
+      "evaluation": "incorrect"
+    },
+    {
+      "id": 6,
+      "schueler_id": 2,
+      "frage_nmbr": 3,
+      "tutor_text": "Deine Antwort ist leider nicht korrekt. Überlege, was mit Kalkstein passiert, wenn er an die Erdoberfläche gelangt. A: wird zurückbefördert; B: verwittert durch CO2-Regen; C: reagiert mit Sauerstoff; D: bildet neue Schichten.",
+      "evaluation": "incorrect"
+    },
+
+    {
+      "id": 7,
+      "schueler_id": 3,
+      "frage_nmbr": 1,
+      "tutor_text": "Du hast richtig erkannt, dass an warmen Meeresbereichen mehr CO2 abgegeben wird. Überlege aber, ob das immer nur an einer bestimmten Stelle passiert.",
+      "evaluation": "partly"
+    },
+    {
+      "id": 8,
+      "schueler_id": 3,
+      "frage_nmbr": 2,
+      "tutor_text": "Deine Antwort stimmt so nicht. CO2 wird nicht direkt zu Gestein. A: Es löst sich; B: verbindet sich mit Sauerstoff; C: entweicht; D: wird zu Glukose.",
+      "evaluation": "incorrect"
+    },
+    {
+      "id": 9,
+      "schueler_id": 3,
+      "frage_nmbr": 3,
+      "tutor_text": "Deine Antwort ist leider nicht korrekt. Überlege, was mit Kalkstein passiert. A: zurück in die Erde; B: verwittert durch CO2-Regen; C: reagiert bei Wärme; D: bildet neue Schichten.",
+      "evaluation": "incorrect"
+    }
+  ]
+}

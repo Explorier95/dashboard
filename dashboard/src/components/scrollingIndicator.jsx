@@ -7,7 +7,7 @@ import { GridContainerVariants } from "./variants";
 
 
 
-function ScrollingIndicator() {
+function ScrollingIndicator(props) {
 
 
 
@@ -22,6 +22,8 @@ function ScrollingIndicator() {
 
 
   return (
+    <div>
+      <h2 className="text-slate-100 font-thin text-1xl w-1/2 mx-auto text-center">{props.title}</h2>
     <motion.div
       ref={containerRef}
       variants={GridContainerVariants}
@@ -32,6 +34,7 @@ function ScrollingIndicator() {
 
       </motion.div>
     </motion.div>
+    </div>
   )
 }
 
