@@ -1,10 +1,10 @@
 import { createPortal } from "react-dom";
 
-export default function ModalAnswer({ info, onClose }) {
+export default function ModalAnswer({ info, onClose, type }) {
     return createPortal(
         <div className="fixed inset-0 bg-transparent bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
-                <h2>Antwort:</h2>
+                <h2>{type}:</h2>
                 <p>"{info}"</p>
                 <button
                     onClick={onClose}
