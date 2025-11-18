@@ -1,19 +1,33 @@
 import { motion } from "framer-motion";
 import { GridContainerVariants } from "./variants";
+import React from "react";
+import { useRef } from "react";
 
-function SlidingSquare(props) {
+function SlidingSquare({children}) {
+
+  const constraintsRef = useRef(null);
+
   return (
-    <div>
-      <h2 className="text-slate-100 font-thin text-1xl w-1/2 mx-auto text-center">{props.title}</h2>
-    <motion.div variants={{ GridContainerVariants }} className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10">
-      <motion.div className="w-1/3 h-1/3 bg-orange-500 rounded-3xl cursor-grab"
-        drag
-        dragConstraints={{ top: -125, left: -125, right: 125, bottom: 125 }}
-        dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
-      />
-    </motion.div>
+    <>
+      <div ref={constraintsRef}
+        /* variants={{ GridContainerVariants }} */
+        className="bg-slate-800 w-[800px] h-[800px] rounded-lg relative"
+      >
+        {React.Children.map(children, (child, index) => (
+          <motion.div
+            className="absolute"
+            key={index}
+            drag
+            dragConstraints={constraintsRef}
+          >
+            <div className="inline-block">
+            {child}
+            </div>
+          </motion.div>
+        ))}
     </div>
-  )
+    </>
+  );
 }
 
 export default SlidingSquare

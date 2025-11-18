@@ -1,6 +1,7 @@
 import jsonData from "../static/json_fuer_fabian_cba_dashboard.json";
 import { useState } from "react";
 import ModalAnswer from "./modalAnswer.jsx";
+import {ColorSquare, ElementSquares} from "./squareVariants.jsx";
 
 function StudentOverview() {
 
@@ -17,22 +18,17 @@ function StudentOverview() {
         setInfo(null);
     }
     function squareColor(antwort) {
-        const squares = {
-            green: "w-6 h-6 bg-green-700 hover:bg-green-500 aspect-square rounded-lg m-2",
-            yellow: "w-6 h-6 bg-yellow-500 hover:bg-yellow-300 aspect-square rounded-lg m-2",
-            red: "w-6 h-6 bg-red-700 hover:bg-red-500 aspect-square rounded-lg m-2"
-        }
 
         let classNameTmp = ""
 
         if (antwort.under_help && antwort.is_correct) {
-            classNameTmp = squares.yellow;
+            classNameTmp = ColorSquare.yellow;
         } else if (!antwort.is_correct && antwort.under_help) {
-            classNameTmp = squares.red;
+            classNameTmp = ColorSquare.red;
         } else if (antwort.is_correct && !antwort.under_help) {
-            classNameTmp = squares.green;
+            classNameTmp = ColorSquare.green;
         } else {
-            classNameTmp = squares.red;
+            classNameTmp = ColorSquare.red;
         }
 
         const studentText = antwort.student_text
@@ -48,23 +44,24 @@ function StudentOverview() {
         <div>
             {info && type === "Antwort" ? <ModalAnswer info={info} onClose={closeDialog} type="Antwort" />
              : info && type === "Frage" ? <ModalAnswer info={info} onClose={closeDialog} type="Frage"/> : ""}
-            <div className="bg-stone-100 rounded-lg justify-center flex items-center gap-10 mb-4 ring-2 ring-blue-500/50">
-                <table className="talbe-auto border-collapse border border-gray-400 m-4">
+             <h2></h2>
+            <div className={ElementSquares.studentMain}>
+                <table className={ElementSquares.studentTableMain}>
                     <thead>
                         <tr>
-                            <th className="border border-gray-300 px-2 py-1 text-left...">Schüler</th>
+                            <th className={ElementSquares.studentTableHeadStatic}>Schüler</th>
                             {jsonData.fragen.map((frage, index) => (<th key={index}
-                             className="border border-gray-300 px-2 py-1 hover:bg-green-500 text-left..."
+                             className={ElementSquares.studentTableHeadDynamic}
                              onClick={()=>openDialog(frage.title,"Frage")}>{frage.nmbr}</th>))}
                         </tr>
                     </thead>
                     {jsonData.schueler.map((student, index) => (<tbody key={index} >
                         <tr>
-                            <td className="border border-gray-300 px-2 py-1">{student.vorname}</td>
+                            <td className={ElementSquares.studentTableData}>{student.vorname}</td>
                             {jsonData.schueler_antworten
                                 .filter(antwort => antwort.schueler_id === student.id)
                                 .map((antwort, index) => (
-                                    <td key={index} className="border border-gray-300">
+                                    <td key={index} className={ElementSquares.studentTableColorBorder}>
                                         {squareColor(antwort)}
                                     </td>
                                 ))}
