@@ -4,8 +4,10 @@ import Header from "./components/header";
 import MotionExamples from "./components/motionExamples"
 import SlidingSquare from "./components/slidingSquare"
 import {ElementSquares} from "./components/squareVariants.jsx";
-
-
+/*
+*Application for the IPN-Dashboard
+*@authort Fabian Tappendorf
+*/
 const App = () => {
 
   return (
