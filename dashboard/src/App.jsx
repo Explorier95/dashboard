@@ -1,7 +1,7 @@
 import StudentOverview from "./components/studentOverview";
 import DynamixText from "./components/dynamicText";
 import Header from "./components/header";
-import MotionExamples from "./components/motionExamples"
+import MotionExamples from "./examples/motionExamples"
 import SlidingSquare from "./components/slidingSquare"
 import {ElementSquares} from "./components/squareVariants.jsx";
 /*

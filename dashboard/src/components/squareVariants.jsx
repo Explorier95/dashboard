@@ -25,8 +25,32 @@ export const ElementSquares = {
     studentTableData: "border border-gray-300 px-1 py-1",
     studentTableColorBorder: "border border-gray-300",
     //heading with explanation
-    studentTableHeaderDiv:"flex items-center gap-1 m-2",
-    studentTableHeaderTable:"border-spacing-x-20",
-    studentTableHeaderText:"text-nowrap text-white text-[10px] ..."
+    studentTableHeaderDiv: "flex items-center gap-1 m-2",
+    studentTableHeaderTable: "border-spacing-x-20",
+    studentTableHeaderText: "text-nowrap text-white text-[10px] ..."
+}
+
+export function SquareColor(antwort, funktion) {
+
+    let classNameTmp = ""
+
+    if (antwort.under_help && antwort.is_correct) {
+        classNameTmp = ColorSquare.yellow;
+    } else if (!antwort.is_correct && antwort.under_help) {
+        classNameTmp = ColorSquare.red;
+    } else if (antwort.is_correct && !antwort.under_help) {
+        classNameTmp = ColorSquare.green;
+    } else {
+        classNameTmp = ColorSquare.red;
+    }
+
+    const studentText = antwort.student_text
+
+    return (
+        <button onClick={() => funktion(studentText, "Antwort")}
+            className={classNameTmp}></button>
+    )
+
+
 }
 

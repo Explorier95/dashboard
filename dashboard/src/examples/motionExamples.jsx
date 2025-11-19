@@ -1,6 +1,6 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import InfinitySquare from "./infinitySquare";
-import SlidingSquare from "./slidingSquare";
+import SlidingSquare from "../components/slidingSquare";
 import ScrollingIndicator from "./scrollingIndicator"
 import AnimatePainting from "./animatePainting";
 import CircleSquareFade from "./circleSquareFade";

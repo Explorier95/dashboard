@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { GridContainerVariants } from "./variants";
 import React from "react";
 import { useRef } from "react";
 
