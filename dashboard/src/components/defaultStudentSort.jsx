@@ -1,18 +1,16 @@
 import { ElementSquares, SquareColor } from "./squareVariants.jsx";
+import StudentTableHead from "./studentTableHead.jsx";
 
 export default function DefaultStudentSort({ list, funktion }) {
 
 
     return (
         <>
-            <thead>
-                <tr>
-                    <th className={ElementSquares.studentTableHeadStatic}>Schüler</th>
-                    {list.fragen.map((frage, index) => (<th key={index}
-                        className={ElementSquares.studentTableHeadDynamic}
-                        onClick={() => funktion(frage.title, "Frage")}>{frage.nmbr}</th>))}
-                </tr>
-            </thead>
+            <StudentTableHead
+            className={ElementSquares.studentTableHeadDynamic}
+            funktion = {funktion}
+            list = {list}
+            />
             {list.schueler.map((student, index) => (<tbody key={index} >
                 <tr>
                     <td className={ElementSquares.studentTableData}>{student.vorname}</td>

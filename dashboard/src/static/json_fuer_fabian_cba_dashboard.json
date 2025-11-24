@@ -13,7 +13,7 @@
 
   "schueler_antworten": [
     { "id": 1, "schueler_id": 1, "frage_nmbr": 1, "student_text": "sie gibt mehr Kohlenstoff abm als sie aufnimmt", "is_correct": true, "under_help": false },
-    { "id": 2, "schueler_id": 1, "frage_nmbr": 2, "student_text": "es wird zu carbonat", "is_correct": null, "under_help": false },
+    { "id": 2, "schueler_id": 1, "frage_nmbr": 2, "student_text": "es wird zu carbonat", "is_correct": true, "under_help": false },
     { "id": 3, "schueler_id": 1, "frage_nmbr": 3, "student_text": "wenn kohlensäurehaltiger Regen kommt löst es sich", "is_correct": null, "under_help": false },
 
     { "id": 4, "schueler_id": 2, "frage_nmbr": 1, "student_text": "Sie besteht aus Sauerstoff und einem anderen Stoff", "is_correct": false, "under_help": true },
@@ -26,7 +26,7 @@
 
     { "id": 10, "schueler_id": 4, "frage_nmbr": 1, "student_text": "Eine Kohlenstoffdioxidquelle ist ein Ort, an dem Kohlenstoffdioxid in die Atmosphäre freigesetzt wird, z.B. durch Vulkane oder Verbrennung fossiler Brennstoffe.", "is_correct": true, "under_help": false },
     { "id": 11, "schueler_id": 4, "frage_nmbr": 2, "student_text": "Im kalten Meerwasser löst sich das Kohlenstoffdioxid und kann von Meeresorganismen aufgenommen werden.", "is_correct": true, "under_help": false },
-    { "id": 12, "schueler_id": 4, "frage_nmbr": 3, "student_text": "Kalksteinablagerungen verwittern durch den Einfluss von Kohlensäure im Regenwasser und tragen zur Bildung von Karstlandschaften bei.", "is_correct": false, "under_help": false }
+    { "id": 12, "schueler_id": 4, "frage_nmbr": 3, "student_text": "Kalksteinablagerungen verwittern durch den Einfluss von Kohlensäure im Regenwasser und tragen zur Bildung von Karstlandschaften bei.", "is_correct": true, "under_help": true }
   ],
 
   "tutor_assessments": [

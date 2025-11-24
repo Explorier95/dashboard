@@ -1,6 +1,8 @@
 import svgIPN from "../static/assets/IPN.svg"
 
 export default function Header() {
+
+
     return (
         <>
             <header className="relative bg-slate-100 p-4">
