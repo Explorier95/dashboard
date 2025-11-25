@@ -1,16 +1,14 @@
 import { ElementSquares, SquareColor } from "./squareVariants.jsx";
-import StudentTableHead from "./studentTableHead.jsx";
 
-export default function DefaultStudentSort({ list, funktion }) {
+/*
+*default sorting function for the IPN-Dashboard
+*@author Fabian Tappendorf
+*/
+export default function DefaultStudentSort({ list, funktion}) {
 
 
     return (
         <>
-            <StudentTableHead
-            className={ElementSquares.studentTableHeadDynamic}
-            funktion = {funktion}
-            list = {list}
-            />
             {list.schueler.map((student, index) => (<tbody key={index} >
                 <tr>
                     <td className={ElementSquares.studentTableData}>{student.vorname}</td>

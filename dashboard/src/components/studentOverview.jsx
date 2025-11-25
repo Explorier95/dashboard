@@ -9,7 +9,7 @@ import SortListName from "./sortListName.jsx";
 import SortListPerformance from "./sortListPerformance.jsx";
 /*
 *Sudent Table for the IPN-Dashboard
-*@authort Fabian Tappendorf
+*@author Fabian Tappendorf
 */
 function StudentOverview() {
 
@@ -69,7 +69,7 @@ function StudentOverview() {
                 <table className={ElementSquares.studentTableMain}>
                     {sort === "alphabetic" ? (
                         <SortListName list={jsonData} funktion={openDialog} />
-                    ) : sort === "bestUp" || sort === "bestDown" || sort === "difficulty" ? (
+                    ) : sort === "bestUp" || sort === "bestDown" ? (
                         <>
                             <StudentTableHead
                                 className={ElementSquares.studentTableHeadDynamic}
@@ -83,12 +83,29 @@ function StudentOverview() {
                                 direction={sort}
                             />
                         </>
-                    ) : (
-                        <DefaultStudentSort list={jsonData} funktion={openDialog} />
+                    ) : sort === "difficulty" ? (<>
+                    <StudentTableHead
+                        className={ElementSquares.studentTableHeadDynamic}
+                        funktion={openDialog}
+                        list={jsonData}
+                        orderBy={sort}
+                    />
+          
+                    </>
+                ) : (
+                        <>
+                            <StudentTableHead
+                                className={ElementSquares.studentTableHeadDynamic}
+                                funktion={openDialog}
+                                list={jsonData}
+                                orderBy={sort}
+                            />
+                       
+                        </>
                     )}
                 </table>
             </div>
-        </div>
+        </div >
 
 
     );

@@ -2,6 +2,7 @@ import { ElementSquares, ColorSquare } from "./squareVariants"
 import Table from "./table"
 /*
 *Header Component for the studentOverview
+*@authort Fabian Tappendorf
 */
 export default function StudentOverviewHeader() {
 

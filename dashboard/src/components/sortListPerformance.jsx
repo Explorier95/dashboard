@@ -1,6 +1,8 @@
-import StudentTableHead from "./studentTableHead.jsx";
 import { ElementSquares, SquareColor } from "./squareVariants.jsx";
-
+/*
+*sorting algorithm for the IPN-Dashboard
+*@author Fabian Tappendorf
+*/
 export default function SortListPerformance({ list, funktion, direction }) {
     //Ermittel die Punkte 
     function countStudentPoints(studentId, list) {

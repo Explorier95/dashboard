@@ -1,12 +1,13 @@
 /*
 *CSS Component for dynamic output
 *All CSS-Elements are to be stored in here
+*@author Fabian Tappendorf
 */
 export const ColorSquare = {
     red: "w-5 h-5 bg-red-700 hover:bg-red-500 aspect-square rounded-sm m-2",
     yellow: "w-5 h-5 bg-yellow-500 hover:bg-yellow-300 aspect-square rounded-sm m-2",
     green: "w-5 h-5 bg-green-700 hover:bg-green-500 aspect-square rounded-sm m-2",
-    //for heading with explanation
+    //for heading with explanation,
     redHeadline: "w-5 h-5 bg-red-700 aspect-square rounded-sm text-center",
     yellowHeadline: "w-5 h-5 bg-yellow-500 aspect-square rounded-sm text-center",
     greenHeadline: "w-5 h-5 bg-green-700 aspect-square rounded-sm text-center"

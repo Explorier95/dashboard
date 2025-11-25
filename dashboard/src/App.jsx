@@ -6,7 +6,7 @@ import SlidingSquare from "./components/slidingSquare"
 import {ElementSquares} from "./components/squareVariants.jsx";
 /*
 *Application for the IPN-Dashboard
-*@authort Fabian Tappendorf
+*@author Fabian Tappendorf
 */
 const App = () => {
 
