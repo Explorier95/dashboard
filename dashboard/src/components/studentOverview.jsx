@@ -100,6 +100,10 @@ function StudentOverview() {
                                 list={jsonData}
                                 orderBy={sort}
                             />
+{/*                             <DefaultStudentSort
+                            list = {jsonData}
+                            funktion={openDialog}
+                            /> */}
                        
                         </>
                     )}

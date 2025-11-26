@@ -12,9 +12,9 @@ export default function StudentTableHead({ className, funktion, list, orderBy })
         const answers = dataList.schueler_antworten
 
         for (let i = 0; i < answers.length - 1; i++) {
-            console.log(answers[i].frage_nmbr)
+            //console.log(answers[i].frage_nmbr)
             if (answers[i].frage_nmbr === questionNr && !answers[i].is_correct) {
-                console.log(answers[i].is_correct)
+                //console.log(answers[i].is_correct)
                 amount++
             }
         }
@@ -63,7 +63,9 @@ export default function StudentTableHead({ className, funktion, list, orderBy })
             {orderBy === "difficulty" || orderBy === "numbered" ? (
 
                 <SortByQuestion
-                    newQuestionList={oderedObject}
+                    newQuestionList={orderedList}
+                    list={list}
+                    funktion={funktion}
                 />
 
             ) : orderBy === "default" ? (<DefaultStudentSort

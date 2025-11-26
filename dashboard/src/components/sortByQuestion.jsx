@@ -1,23 +1,31 @@
 import { ElementSquares, SquareColor } from "./squareVariants.jsx";
 
 export default function SortByQuestion({ list, funktion, newQuestionList }) {
-    //TODO
-    function sortList(studentAnswerList, questionList) {
-        let newStudentAnswerList = []
-        for (let x = 0; x < list.schueler_antworten - 1; x++) {
-            if (studentAnswerList[x].frage_nmbr === questionList[x].nmbr) {
-                newStudentAnswerList.push(questionList[x])
-            } else{
-                
-            }
-        }
 
-    }
+    // Absichern, falls newQuestionList beim ersten Render noch nicht da ist
+    const frageReihenfolge = Array.isArray(newQuestionList)
+        ? newQuestionList.map(i => i.nmbr)
+        : [];
 
     return (
+        <tbody>
+            {list.schueler.map(student => (
+                <tr key={student.id}>
+                    <td>{student.vorname}</td>
 
+                    {newQuestionList.map(question => {
+                        const ans = list.schueler_antworten.find(
+                            a => a.schueler_id === student.id && a.frage_nmbr === question.nmbr
+                        );
 
-
-        null
-    )
+                        return (
+                            <td key={question.nmbr}>
+                                {SquareColor(ans, funktion)}
+                            </td>
+                        );
+                    })}
+                </tr>
+            ))}
+        </tbody>
+    );
 }
