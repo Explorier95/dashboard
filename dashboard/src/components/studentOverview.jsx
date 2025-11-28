@@ -15,7 +15,7 @@ function StudentOverview() {
 
     const [info, setInfo] = useState(null)
     const [type, setType] = useState(null)
-    const [sort, setSort] = useState("sortUp")
+    const [sort, setSort] = useState("alphabetic")
 
     function openDialog(text, type) {
         setInfo(text)
@@ -36,31 +36,34 @@ function StudentOverview() {
                     <h3 className="font-semibold color-gray">Schüler</h3>
                     <input
                         type="checkbox"
+                        className={ElementSquares.checkboxAccent}
                         checked={sort === "alphabetic"}
                         onChange={() => setSort(sort === "alphabetic" ? "default" : "alphabetic")}
                     />
-                    <label className="align-top px-1">alphabetisch</label>
+                    <label className="align-top px-1">Alphabetisch</label>
                     <input
                         type="checkbox"
+                        className={ElementSquares.checkboxAccent}
                         checked={sort === "bestUp"}
                         onChange={() => setSort(sort === "bestUp" ? "default" : "bestUp")}
                     />
-                    <label className="align-top px-1">beste Leistung oben</label>
+                    <label className="align-top px-1">Beste Leistung oben</label>
                     <input
                         type="checkbox"
+                        className={ElementSquares.checkboxAccent}
                         checked={sort === "bestDown"}
                         onChange={() => setSort(sort === "bestDown" ? "default" : "bestDown")}
                     />
-                    <label className="align-top px-1">beste Leistung unten</label></div>
+                    <label className="align-top px-1">Beste Leistung unten</label></div>
                 <div className="text-[10px]">
                     <h3 className="font-semibold color-gray">Fragen</h3>
-                    <input type="checkbox" id="numbering" />
-                    <label className="align-top px-1">Nummerierung</label>                    <input
+                    <input
                         type="checkbox"
+                        className={ElementSquares.checkboxAccent}
                         checked={sort === "difficulty"}
                         onChange={() => setSort(sort === "difficulty" ? "default" : "difficulty")}
                     />
-                    <label className="align-top px-1">schwierigste Frage rechts</label></div>
+                    <label className="align-top px-1">Schwierigste Frage rechts</label></div>
             </div>
             {/* Importet Component */}
             <StudentOverviewHeader
@@ -84,15 +87,15 @@ function StudentOverview() {
                             />
                         </>
                     ) : sort === "difficulty" ? (<>
-                    <StudentTableHead
-                        className={ElementSquares.studentTableHeadDynamic}
-                        funktion={openDialog}
-                        list={jsonData}
-                        orderBy={sort}
-                    />
-          
+                        <StudentTableHead
+                            className={ElementSquares.studentTableHeadDynamic}
+                            funktion={openDialog}
+                            list={jsonData}
+                            orderBy={sort}
+                        />
+
                     </>
-                ) : (
+                    ) : (
                         <>
                             <StudentTableHead
                                 className={ElementSquares.studentTableHeadDynamic}
@@ -100,11 +103,6 @@ function StudentOverview() {
                                 list={jsonData}
                                 orderBy={sort}
                             />
-{/*                             <DefaultStudentSort
-                            list = {jsonData}
-                            funktion={openDialog}
-                            /> */}
-                       
                         </>
                     )}
                 </table>

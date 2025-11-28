@@ -79,7 +79,7 @@ export default function SortListPerformance({ list, funktion, direction }) {
                     {list.schueler_antworten
                         .filter(antwort => antwort.schueler_id === student.id)
                         .map((antwort, index) => (
-                            <td key={index} className={ElementSquares.studentTableColorBorder}>
+                            <td key={index}>
                                 {SquareColor(antwort, funktion)}
                             </td>
                         ))}

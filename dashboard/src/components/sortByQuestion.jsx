@@ -11,7 +11,7 @@ export default function SortByQuestion({ list, funktion, newQuestionList }) {
         <tbody>
             {list.schueler.map(student => (
                 <tr key={student.id}>
-                    <td>{student.vorname}</td>
+                    <td className={ElementSquares.studentTableData}>{student.vorname}</td>
 
                     {newQuestionList.map(question => {
                         const ans = list.schueler_antworten.find(

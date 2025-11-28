@@ -17,18 +17,22 @@ export const ElementSquares = {
     //app content
     appMain: "flex flex-col gap-10 overflow-x-hidden",
     appJustifyCenter: "justify-items-center",
+
     //studentOverview  content
     studentSearchBar: "bg-stone-100 rounded-lg justify-center items-center gap-4 mb-1 p-2 ring-2 ring-blue-500/50",
     studentMain: "bg-stone-100 rounded-lg justify-center flex items-center gap-10 mb-4 ring-2 ring-blue-500/50",
     studentTableMain: "talbe-auto border-collapse border border-gray-400 m-4",
     studentTableHeadStatic: "border border-gray-300 px-1 py-1 text-left...",
-    studentTableHeadDynamic: "border border-gray-300 px-1 py-1 hover:bg-green-500 text-left...",
-    studentTableData: "border border-gray-300 px-1 py-1",
-    studentTableColorBorder: "border border-gray-300",
+    studentTableHeadDynamic: "border-b border-gray-300 px-1 py-1 hover:bg-blue-400 text-sm font-semibold text-blue-900 ",
+    studentTableData: "text-center text-sm",
+    
     //heading with explanation
-    studentTableHeaderDiv: "flex items-center gap-1 m-2",
-    studentTableHeaderTable: "border-spacing-x-20",
-    studentTableHeaderText: "text-nowrap text-white text-[10px] ..."
+    studentTableHeaderDiv: "flex items-center gap-1 m-2  ",
+    studentTableHeaderTable: "border-spacing-x-20 ",
+    studentTableHeaderText: "text-nowrap text-white text-[10px] ...",
+
+    //checkbox
+    checkboxAccent: "accent-blue-900"
 }
 
 export function SquareColor(antwort, funktion) {

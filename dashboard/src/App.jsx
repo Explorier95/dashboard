@@ -2,6 +2,7 @@ import StudentOverview from "./components/studentOverview";
 import DynamixText from "./components/dynamicText";
 import Header from "./components/header";
 import MotionExamples from "./examples/motionExamples"
+import PieChart from "./components/pieOverview.jsx";
 import SlidingSquare from "./components/slidingSquare"
 import {ElementSquares} from "./components/squareVariants.jsx";
 /*
@@ -22,8 +23,15 @@ const App = () => {
       {/* Dashboard Section */}
       <div className={ElementSquares.appJustifyCenter}>
         <StudentOverview />
+
       {/* Dashboard Dragable version */}
-        <SlidingSquare><StudentOverview /></SlidingSquare>
+        <SlidingSquare><StudentOverview />
+                <PieChart
+    richtig={12}
+    falsch={5}
+    richtigNachHilfe={3}
+/>
+        </SlidingSquare>
       </div>
 
       {/* Text */}

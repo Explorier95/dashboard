@@ -2,29 +2,28 @@ import { motion } from "framer-motion";
 import React from "react";
 import { useRef } from "react";
 
-function SlidingSquare({children}) {
+function SlidingSquare({ children }) {
 
   const constraintsRef = useRef(null);
+  
 
   return (
     <>
-      <div ref={constraintsRef}
-        /* variants={{ GridContainerVariants }} */
-        className="bg-slate-800 w-[800px] h-[800px] rounded-lg relative"
+      <div
+        ref={constraintsRef}
+        className="bg-slate-800 w-[800px] h-[800px] rounded-lg relative flex gap-4 p-4 flex-wrap"
       >
         {React.Children.map(children, (child, index) => (
           <motion.div
-            className="absolute"
             key={index}
             drag
             dragConstraints={constraintsRef}
+            className="inline-block"
           >
-            <div className="inline-block">
             {child}
-            </div>
           </motion.div>
         ))}
-    </div>
+      </div>
     </>
   );
 }

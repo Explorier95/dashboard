@@ -15,19 +15,19 @@ export default function StudentOverviewHeader() {
                     <th>
                         <div className={ElementSquares.studentTableHeaderDiv}>
                             <div className={ColorSquare.greenHeadline}></div>
-                            <span>korrekt (direkt)</span>
+                            <span>Korrekt (direkt)</span>
                         </div>
                     </th>
                     <th>
                         <div className={ElementSquares.studentTableHeaderDiv}>
                             <div className={ColorSquare.yellowHeadline}></div>
-                            <span>korrekt (nach Hilfe)</span>
+                            <span>Korrekt (nach Hilfe)</span>
                         </div>
                     </th>
                     <th>
                         <div className={ElementSquares.studentTableHeaderDiv}>
                             <div className={ColorSquare.redHeadline}></div>
-                            <span>inkorrekt</span>
+                            <span>Inkorrekt</span>
                         </div>
                     </th>
                 </>

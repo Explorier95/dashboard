@@ -1,4 +1,4 @@
-import { ElementSquares, SquareColor } from "./squareVariants.jsx";
+import { ElementSquares } from "./squareVariants.jsx";
 import DefaultStudentSort from "./defaultStudentSort.jsx";
 import SortByQuestion from "./sortByQuestion.jsx";
 /*
@@ -53,6 +53,7 @@ export default function StudentTableHead({ className, funktion, list, orderBy })
     return (
         <>
             <thead>
+                {console.log(orderBy)}
                 <tr>
                     <th className={className}>Schüler</th>
                     {orderedList.map((frage, index) => (<th key={index}
