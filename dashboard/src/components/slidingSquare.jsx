@@ -11,7 +11,7 @@ function SlidingSquare({ children }) {
     <>
       <div
         ref={constraintsRef}
-        className="bg-slate-800 w-[800px] h-[800px] rounded-lg relative flex gap-4 p-4 flex-wrap"
+        className="bg-slate-800 w-full min-h-[500px] md:min-h-[650px] lg:min-h-[750px] rounded-lg relative flex gap-4 p-4 flex-wrap overflow-hidden"
       >
         {React.Children.map(children, (child, index) => (
           <motion.div

@@ -1,99 +1,1749 @@
 {
   "schueler": [
-    { "id": 1, "vorname": "Raphael", "n_total_correct": null },
-    { "id": 2, "vorname": "Kim", "n_total_correct": null },
-    { "id": 3, "vorname": "Maria", "n_total_correct": null },
-    { "id": 4, "vorname": "Otto", "n_total_correct": null }
+    {
+      "id": 1,
+      "vorname": "Raphael",
+      "n_total_correct": null
+    },
+    {
+      "id": 2,
+      "vorname": "Kim",
+      "n_total_correct": null
+    },
+    {
+      "id": 3,
+      "vorname": "Maria",
+      "n_total_correct": null
+    },
+    {
+      "id": 4,
+      "vorname": "Otto",
+      "n_total_correct": null
+    },
+    {
+      "id": 5,
+      "vorname": "Lena",
+      "n_total_correct": null
+    },
+    {
+      "id": 6,
+      "vorname": "Jonas",
+      "n_total_correct": null
+    },
+    {
+      "id": 7,
+      "vorname": "Ella",
+      "n_total_correct": null
+    },
+    {
+      "id": 8,
+      "vorname": "Felix",
+      "n_total_correct": null
+    },
+    {
+      "id": 9,
+      "vorname": "Amira",
+      "n_total_correct": null
+    },
+    {
+      "id": 10,
+      "vorname": "Noah",
+      "n_total_correct": null
+    },
+    {
+      "id": 11,
+      "vorname": "Mila",
+      "n_total_correct": null
+    },
+    {
+      "id": 12,
+      "vorname": "Liam",
+      "n_total_correct": null
+    },
+    {
+      "id": 13,
+      "vorname": "Sophie",
+      "n_total_correct": null
+    },
+    {
+      "id": 14,
+      "vorname": "Ben",
+      "n_total_correct": null
+    },
+    {
+      "id": 15,
+      "vorname": "Emma",
+      "n_total_correct": null
+    },
+    {
+      "id": 16,
+      "vorname": "Paul",
+      "n_total_correct": null
+    },
+    {
+      "id": 17,
+      "vorname": "Lea",
+      "n_total_correct": null
+    },
+    {
+      "id": 18,
+      "vorname": "Max",
+      "n_total_correct": null
+    },
+    {
+      "id": 19,
+      "vorname": "Hannah",
+      "n_total_correct": null
+    },
+    {
+      "id": 20,
+      "vorname": "Leo",
+      "n_total_correct": null
+    }
   ],
   "fragen": [
-    { "nmbr": 1, "title": "Wie ist eine Kohlenstoffdioxidquelle definiert?" },
-    { "nmbr": 2, "title": "Was passiert mit Kohlenstoffdioxid, wenn es in kaltes Meerwasser gelangt?" },
-    { "nmbr": 3, "title": "Was geschieht mit Kalksteinablagerungen, die an die Erdoberfläche verschoben werden?" }
+    {
+      "nmbr": 1,
+      "title": "Wie ist eine Kohlenstoffdioxidquelle definiert?"
+    },
+    {
+      "nmbr": 2,
+      "title": "Was passiert mit Kohlenstoffdioxid, wenn es in kaltes Meerwasser gelangt?"
+    },
+    {
+      "nmbr": 3,
+      "title": "Was geschieht mit Kalksteinablagerungen, die an die Erdoberfl?che verschoben werden?"
+    },
+    {
+      "nmbr": 4,
+      "title": "Welche Prozesse f?hren zur Bindung von CO2 in Pflanzen?"
+    },
+    {
+      "nmbr": 5,
+      "title": "Wie wirkt sich Temperatur auf die CO2-L?slichkeit im Wasser aus?"
+    },
+    {
+      "nmbr": 6,
+      "title": "Welche Rolle spielt Photosynthese im Kohlenstoffkreislauf?"
+    },
+    {
+      "nmbr": 7,
+      "title": "Was passiert mit CO2 in der Atmosph?re bei steigenden Emissionen?"
+    },
+    {
+      "nmbr": 8,
+      "title": "Wie beeinflussen Ozeanstr?mungen die CO2-Verteilung?"
+    },
+    {
+      "nmbr": 9,
+      "title": "Welche Faktoren beg?nstigen CO2-Senken?"
+    },
+    {
+      "nmbr": 10,
+      "title": "Wie lange verbleibt CO2 im Ozean, bevor es wieder freigesetzt wird?"
+    }
   ],
-
   "schueler_antworten": [
-    { "id": 1, "schueler_id": 1, "frage_nmbr": 1, "student_text": "sie gibt mehr Kohlenstoff abm als sie aufnimmt", "is_correct": true, "under_help": false },
-    { "id": 2, "schueler_id": 1, "frage_nmbr": 2, "student_text": "es wird zu carbonat", "is_correct": true, "under_help": false },
-    { "id": 3, "schueler_id": 1, "frage_nmbr": 3, "student_text": "wenn kohlensäurehaltiger Regen kommt löst es sich", "is_correct": null, "under_help": false },
-
-    { "id": 4, "schueler_id": 2, "frage_nmbr": 1, "student_text": "Sie besteht aus Sauerstoff und einem anderen Stoff", "is_correct": false, "under_help": true },
-    { "id": 5, "schueler_id": 2, "frage_nmbr": 2, "student_text": "dann wird es zu Sauerstoff", "is_correct": true, "under_help": false },
-    { "id": 6, "schueler_id": 2, "frage_nmbr": 3, "student_text": "Sie werden zu Kohle", "is_correct": false, "under_help": false },
-
-    { "id": 7, "schueler_id": 3, "frage_nmbr": 1, "student_text": "Eine Kohlenstoffdioxidquelle befindet sich am wärmsten Bereich eines Meeres oder Ozeans. Hier wird mehr Kohlenstoff ausgestoßen als aufgenommen.", "is_correct": null, "under_help": false },
-    { "id": 8, "schueler_id": 3, "frage_nmbr": 2, "student_text": "es wird zu einem gestein", "is_correct": true, "under_help": true },
-    { "id": 9, "schueler_id": 3, "frage_nmbr": 3, "student_text": "sie werden zu einer schicht der Litosphgere", "is_correct": true, "under_help": false },
-
-    { "id": 10, "schueler_id": 4, "frage_nmbr": 1, "student_text": "Eine Kohlenstoffdioxidquelle ist ein Ort, an dem Kohlenstoffdioxid in die Atmosphäre freigesetzt wird, z.B. durch Vulkane oder Verbrennung fossiler Brennstoffe.", "is_correct": true, "under_help": false },
-    { "id": 11, "schueler_id": 4, "frage_nmbr": 2, "student_text": "Im kalten Meerwasser löst sich das Kohlenstoffdioxid und kann von Meeresorganismen aufgenommen werden.", "is_correct": true, "under_help": false },
-    { "id": 12, "schueler_id": 4, "frage_nmbr": 3, "student_text": "Kalksteinablagerungen verwittern durch den Einfluss von Kohlensäure im Regenwasser und tragen zur Bildung von Karstlandschaften bei.", "is_correct": true, "under_help": true }
-  ],
-
-  "tutor_assessments": [
     {
       "id": 1,
       "schueler_id": 1,
       "frage_nmbr": 1,
-      "tutor_text": "Du hast richtig erkannt, dass es um das Verhältnis von Abgabe und Aufnahme geht. Überlege nochmal, worauf sich das „mehr“ genau bezieht. Versuch, deine Antwort noch etwas genauer zu formulieren! Probier's gleich nochmal!",
-      "evaluation": "partly"
+      "student_text": "Platzhalter Antwort 1-1",
+      "is_correct": true,
+      "under_help": true
     },
     {
       "id": 2,
       "schueler_id": 1,
       "frage_nmbr": 2,
-      "tutor_text": "Du hast richtig erkannt, dass Kohlenstoffdioxid im Wasser umgewandelt werden kann. Überlege aber noch einmal, was der allererste Schritt ist, wenn das Gas ins Meerwasser gelangt. Versuch es noch einmal!",
-      "evaluation": "partly"
+      "student_text": "Platzhalter Antwort 1-2",
+      "is_correct": false,
+      "under_help": false
     },
     {
       "id": 3,
       "schueler_id": 1,
       "frage_nmbr": 3,
-      "tutor_text": "Du hast richtig erkannt, dass Regen eine Rolle spielt! Überleg mal, was genau für Stoffe im Regen enthalten sein könnten und wie sie mit Kalkstein reagieren. Versuch, deine Antwort nochmal zu präzisieren!",
-      "evaluation": "partly"
+      "student_text": "Platzhalter Antwort 1-3",
+      "is_correct": false,
+      "under_help": false
     },
-
     {
       "id": 4,
-      "schueler_id": 2,
-      "frage_nmbr": 1,
-      "tutor_text": "Deine Antwort bezieht sich auf den Aufbau von Kohlenstoffdioxid, beantwortet aber nicht, was eine Kohlenstoffdioxidquelle ist. Versuche noch einmal zu erklären, was unter einer Quelle verstanden wird. A: mehr Abgabe als Aufnahme; B: weniger; C: nur Aufnahme; D: Bereiche der Atmosphäre mit mehr Abgabe.",
-      "evaluation": "incorrect"
+      "schueler_id": 1,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 1-4",
+      "is_correct": true,
+      "under_help": false
     },
     {
       "id": 5,
-      "schueler_id": 2,
-      "frage_nmbr": 2,
-      "tutor_text": "Deine Antwort ist leider nicht richtig. Kohlenstoffdioxid wird im Meerwasser nicht direkt zu Sauerstoff. A: Es löst sich; B: verbindet sich mit Sauerstoff; C: entweicht sofort wieder; D: wird zu Glukose.",
-      "evaluation": "incorrect"
+      "schueler_id": 1,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 1-5",
+      "is_correct": false,
+      "under_help": false
     },
     {
       "id": 6,
-      "schueler_id": 2,
-      "frage_nmbr": 3,
-      "tutor_text": "Deine Antwort ist leider nicht korrekt. Überlege, was mit Kalkstein passiert, wenn er an die Erdoberfläche gelangt. A: wird zurückbefördert; B: verwittert durch CO2-Regen; C: reagiert mit Sauerstoff; D: bildet neue Schichten.",
-      "evaluation": "incorrect"
+      "schueler_id": 1,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 1-6",
+      "is_correct": true,
+      "under_help": false
     },
-
     {
       "id": 7,
-      "schueler_id": 3,
-      "frage_nmbr": 1,
-      "tutor_text": "Du hast richtig erkannt, dass an warmen Meeresbereichen mehr CO2 abgegeben wird. Überlege aber, ob das immer nur an einer bestimmten Stelle passiert.",
-      "evaluation": "partly"
+      "schueler_id": 1,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 1-7",
+      "is_correct": false,
+      "under_help": false
     },
     {
       "id": 8,
-      "schueler_id": 3,
-      "frage_nmbr": 2,
-      "tutor_text": "Deine Antwort stimmt so nicht. CO2 wird nicht direkt zu Gestein. A: Es löst sich; B: verbindet sich mit Sauerstoff; C: entweicht; D: wird zu Glukose.",
-      "evaluation": "incorrect"
+      "schueler_id": 1,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 1-8",
+      "is_correct": false,
+      "under_help": false
     },
     {
       "id": 9,
+      "schueler_id": 1,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 1-9",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 10,
+      "schueler_id": 1,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 1-10",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 11,
+      "schueler_id": 2,
+      "frage_nmbr": 1,
+      "student_text": "Platzhalter Antwort 2-1",
+      "is_correct": false,
+      "under_help": true
+    },
+    {
+      "id": 12,
+      "schueler_id": 2,
+      "frage_nmbr": 2,
+      "student_text": "Platzhalter Antwort 2-2",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 13,
+      "schueler_id": 2,
+      "frage_nmbr": 3,
+      "student_text": "Platzhalter Antwort 2-3",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 14,
+      "schueler_id": 2,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 2-4",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 15,
+      "schueler_id": 2,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 2-5",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 16,
+      "schueler_id": 2,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 2-6",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 17,
+      "schueler_id": 2,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 2-7",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 18,
+      "schueler_id": 2,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 2-8",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 19,
+      "schueler_id": 2,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 2-9",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 20,
+      "schueler_id": 2,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 2-10",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 21,
+      "schueler_id": 3,
+      "frage_nmbr": 1,
+      "student_text": "Platzhalter Antwort 3-1",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 22,
+      "schueler_id": 3,
+      "frage_nmbr": 2,
+      "student_text": "Platzhalter Antwort 3-2",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 23,
       "schueler_id": 3,
       "frage_nmbr": 3,
-      "tutor_text": "Deine Antwort ist leider nicht korrekt. Überlege, was mit Kalkstein passiert. A: zurück in die Erde; B: verwittert durch CO2-Regen; C: reagiert bei Wärme; D: bildet neue Schichten.",
-      "evaluation": "incorrect"
+      "student_text": "Platzhalter Antwort 3-3",
+      "is_correct": false,
+      "under_help": true
+    },
+    {
+      "id": 24,
+      "schueler_id": 3,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 3-4",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 25,
+      "schueler_id": 3,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 3-5",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 26,
+      "schueler_id": 3,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 3-6",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 27,
+      "schueler_id": 3,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 3-7",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 28,
+      "schueler_id": 3,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 3-8",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 29,
+      "schueler_id": 3,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 3-9",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 30,
+      "schueler_id": 3,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 3-10",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 31,
+      "schueler_id": 4,
+      "frage_nmbr": 1,
+      "student_text": "Platzhalter Antwort 4-1",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 32,
+      "schueler_id": 4,
+      "frage_nmbr": 2,
+      "student_text": "Platzhalter Antwort 4-2",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 33,
+      "schueler_id": 4,
+      "frage_nmbr": 3,
+      "student_text": "Platzhalter Antwort 4-3",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 34,
+      "schueler_id": 4,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 4-4",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 35,
+      "schueler_id": 4,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 4-5",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 36,
+      "schueler_id": 4,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 4-6",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 37,
+      "schueler_id": 4,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 4-7",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 38,
+      "schueler_id": 4,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 4-8",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 39,
+      "schueler_id": 4,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 4-9",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 40,
+      "schueler_id": 4,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 4-10",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 41,
+      "schueler_id": 5,
+      "frage_nmbr": 1,
+      "student_text": "Platzhalter Antwort 5-1",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 42,
+      "schueler_id": 5,
+      "frage_nmbr": 2,
+      "student_text": "Platzhalter Antwort 5-2",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 43,
+      "schueler_id": 5,
+      "frage_nmbr": 3,
+      "student_text": "Platzhalter Antwort 5-3",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 44,
+      "schueler_id": 5,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 5-4",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 45,
+      "schueler_id": 5,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 5-5",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 46,
+      "schueler_id": 5,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 5-6",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 47,
+      "schueler_id": 5,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 5-7",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 48,
+      "schueler_id": 5,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 5-8",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 49,
+      "schueler_id": 5,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 5-9",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 50,
+      "schueler_id": 5,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 5-10",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 51,
+      "schueler_id": 6,
+      "frage_nmbr": 1,
+      "student_text": "Platzhalter Antwort 6-1",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 52,
+      "schueler_id": 6,
+      "frage_nmbr": 2,
+      "student_text": "Platzhalter Antwort 6-2",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 53,
+      "schueler_id": 6,
+      "frage_nmbr": 3,
+      "student_text": "Platzhalter Antwort 6-3",
+      "is_correct": false,
+      "under_help": true
+    },
+    {
+      "id": 54,
+      "schueler_id": 6,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 6-4",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 55,
+      "schueler_id": 6,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 6-5",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 56,
+      "schueler_id": 6,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 6-6",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 57,
+      "schueler_id": 6,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 6-7",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 58,
+      "schueler_id": 6,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 6-8",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 59,
+      "schueler_id": 6,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 6-9",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 60,
+      "schueler_id": 6,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 6-10",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 61,
+      "schueler_id": 7,
+      "frage_nmbr": 1,
+      "student_text": "Platzhalter Antwort 7-1",
+      "is_correct": false,
+      "under_help": true
+    },
+    {
+      "id": 62,
+      "schueler_id": 7,
+      "frage_nmbr": 2,
+      "student_text": "Platzhalter Antwort 7-2",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 63,
+      "schueler_id": 7,
+      "frage_nmbr": 3,
+      "student_text": "Platzhalter Antwort 7-3",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 64,
+      "schueler_id": 7,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 7-4",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 65,
+      "schueler_id": 7,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 7-5",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 66,
+      "schueler_id": 7,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 7-6",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 67,
+      "schueler_id": 7,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 7-7",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 68,
+      "schueler_id": 7,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 7-8",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 69,
+      "schueler_id": 7,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 7-9",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 70,
+      "schueler_id": 7,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 7-10",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 71,
+      "schueler_id": 8,
+      "frage_nmbr": 1,
+      "student_text": "Platzhalter Antwort 8-1",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 72,
+      "schueler_id": 8,
+      "frage_nmbr": 2,
+      "student_text": "Platzhalter Antwort 8-2",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 73,
+      "schueler_id": 8,
+      "frage_nmbr": 3,
+      "student_text": "Platzhalter Antwort 8-3",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 74,
+      "schueler_id": 8,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 8-4",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 75,
+      "schueler_id": 8,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 8-5",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 76,
+      "schueler_id": 8,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 8-6",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 77,
+      "schueler_id": 8,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 8-7",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 78,
+      "schueler_id": 8,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 8-8",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 79,
+      "schueler_id": 8,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 8-9",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 80,
+      "schueler_id": 8,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 8-10",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 81,
+      "schueler_id": 9,
+      "frage_nmbr": 1,
+      "student_text": "Platzhalter Antwort 9-1",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 82,
+      "schueler_id": 9,
+      "frage_nmbr": 2,
+      "student_text": "Platzhalter Antwort 9-2",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 83,
+      "schueler_id": 9,
+      "frage_nmbr": 3,
+      "student_text": "Platzhalter Antwort 9-3",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 84,
+      "schueler_id": 9,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 9-4",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 85,
+      "schueler_id": 9,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 9-5",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 86,
+      "schueler_id": 9,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 9-6",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 87,
+      "schueler_id": 9,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 9-7",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 88,
+      "schueler_id": 9,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 9-8",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 89,
+      "schueler_id": 9,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 9-9",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 90,
+      "schueler_id": 9,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 9-10",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 91,
+      "schueler_id": 10,
+      "frage_nmbr": 1,
+      "student_text": "Platzhalter Antwort 10-1",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 92,
+      "schueler_id": 10,
+      "frage_nmbr": 2,
+      "student_text": "Platzhalter Antwort 10-2",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 93,
+      "schueler_id": 10,
+      "frage_nmbr": 3,
+      "student_text": "Platzhalter Antwort 10-3",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 94,
+      "schueler_id": 10,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 10-4",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 95,
+      "schueler_id": 10,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 10-5",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 96,
+      "schueler_id": 10,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 10-6",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 97,
+      "schueler_id": 10,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 10-7",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 98,
+      "schueler_id": 10,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 10-8",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 99,
+      "schueler_id": 10,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 10-9",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 100,
+      "schueler_id": 10,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 10-10",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 101,
+      "schueler_id": 11,
+      "frage_nmbr": 1,
+      "student_text": "Platzhalter Antwort 11-1",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 102,
+      "schueler_id": 11,
+      "frage_nmbr": 2,
+      "student_text": "Platzhalter Antwort 11-2",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 103,
+      "schueler_id": 11,
+      "frage_nmbr": 3,
+      "student_text": "Platzhalter Antwort 11-3",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 104,
+      "schueler_id": 11,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 11-4",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 105,
+      "schueler_id": 11,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 11-5",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 106,
+      "schueler_id": 11,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 11-6",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 107,
+      "schueler_id": 11,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 11-7",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 108,
+      "schueler_id": 11,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 11-8",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 109,
+      "schueler_id": 11,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 11-9",
+      "is_correct": false,
+      "under_help": true
+    },
+    {
+      "id": 110,
+      "schueler_id": 11,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 11-10",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 111,
+      "schueler_id": 12,
+      "frage_nmbr": 1,
+      "student_text": "Platzhalter Antwort 12-1",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 112,
+      "schueler_id": 12,
+      "frage_nmbr": 2,
+      "student_text": "Platzhalter Antwort 12-2",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 113,
+      "schueler_id": 12,
+      "frage_nmbr": 3,
+      "student_text": "Platzhalter Antwort 12-3",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 114,
+      "schueler_id": 12,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 12-4",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 115,
+      "schueler_id": 12,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 12-5",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 116,
+      "schueler_id": 12,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 12-6",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 117,
+      "schueler_id": 12,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 12-7",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 118,
+      "schueler_id": 12,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 12-8",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 119,
+      "schueler_id": 12,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 12-9",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 120,
+      "schueler_id": 12,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 12-10",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 121,
+      "schueler_id": 13,
+      "frage_nmbr": 1,
+      "student_text": "Platzhalter Antwort 13-1",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 122,
+      "schueler_id": 13,
+      "frage_nmbr": 2,
+      "student_text": "Platzhalter Antwort 13-2",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 123,
+      "schueler_id": 13,
+      "frage_nmbr": 3,
+      "student_text": "Platzhalter Antwort 13-3",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 124,
+      "schueler_id": 13,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 13-4",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 125,
+      "schueler_id": 13,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 13-5",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 126,
+      "schueler_id": 13,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 13-6",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 127,
+      "schueler_id": 13,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 13-7",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 128,
+      "schueler_id": 13,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 13-8",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 129,
+      "schueler_id": 13,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 13-9",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 130,
+      "schueler_id": 13,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 13-10",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 131,
+      "schueler_id": 14,
+      "frage_nmbr": 1,
+      "student_text": "Platzhalter Antwort 14-1",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 132,
+      "schueler_id": 14,
+      "frage_nmbr": 2,
+      "student_text": "Platzhalter Antwort 14-2",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 133,
+      "schueler_id": 14,
+      "frage_nmbr": 3,
+      "student_text": "Platzhalter Antwort 14-3",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 134,
+      "schueler_id": 14,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 14-4",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 135,
+      "schueler_id": 14,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 14-5",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 136,
+      "schueler_id": 14,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 14-6",
+      "is_correct": false,
+      "under_help": true
+    },
+    {
+      "id": 137,
+      "schueler_id": 14,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 14-7",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 138,
+      "schueler_id": 14,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 14-8",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 139,
+      "schueler_id": 14,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 14-9",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 140,
+      "schueler_id": 14,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 14-10",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 141,
+      "schueler_id": 15,
+      "frage_nmbr": 1,
+      "student_text": "Platzhalter Antwort 15-1",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 142,
+      "schueler_id": 15,
+      "frage_nmbr": 2,
+      "student_text": "Platzhalter Antwort 15-2",
+      "is_correct": false,
+      "under_help": true
+    },
+    {
+      "id": 143,
+      "schueler_id": 15,
+      "frage_nmbr": 3,
+      "student_text": "Platzhalter Antwort 15-3",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 144,
+      "schueler_id": 15,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 15-4",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 145,
+      "schueler_id": 15,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 15-5",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 146,
+      "schueler_id": 15,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 15-6",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 147,
+      "schueler_id": 15,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 15-7",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 148,
+      "schueler_id": 15,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 15-8",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 149,
+      "schueler_id": 15,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 15-9",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 150,
+      "schueler_id": 15,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 15-10",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 151,
+      "schueler_id": 16,
+      "frage_nmbr": 1,
+      "student_text": "Platzhalter Antwort 16-1",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 152,
+      "schueler_id": 16,
+      "frage_nmbr": 2,
+      "student_text": "Platzhalter Antwort 16-2",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 153,
+      "schueler_id": 16,
+      "frage_nmbr": 3,
+      "student_text": "Platzhalter Antwort 16-3",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 154,
+      "schueler_id": 16,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 16-4",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 155,
+      "schueler_id": 16,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 16-5",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 156,
+      "schueler_id": 16,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 16-6",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 157,
+      "schueler_id": 16,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 16-7",
+      "is_correct": false,
+      "under_help": true
+    },
+    {
+      "id": 158,
+      "schueler_id": 16,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 16-8",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 159,
+      "schueler_id": 16,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 16-9",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 160,
+      "schueler_id": 16,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 16-10",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 161,
+      "schueler_id": 17,
+      "frage_nmbr": 1,
+      "student_text": "Platzhalter Antwort 17-1",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 162,
+      "schueler_id": 17,
+      "frage_nmbr": 2,
+      "student_text": "Platzhalter Antwort 17-2",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 163,
+      "schueler_id": 17,
+      "frage_nmbr": 3,
+      "student_text": "Platzhalter Antwort 17-3",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 164,
+      "schueler_id": 17,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 17-4",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 165,
+      "schueler_id": 17,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 17-5",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 166,
+      "schueler_id": 17,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 17-6",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 167,
+      "schueler_id": 17,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 17-7",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 168,
+      "schueler_id": 17,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 17-8",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 169,
+      "schueler_id": 17,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 17-9",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 170,
+      "schueler_id": 17,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 17-10",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 171,
+      "schueler_id": 18,
+      "frage_nmbr": 1,
+      "student_text": "Platzhalter Antwort 18-1",
+      "is_correct": false,
+      "under_help": true
+    },
+    {
+      "id": 172,
+      "schueler_id": 18,
+      "frage_nmbr": 2,
+      "student_text": "Platzhalter Antwort 18-2",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 173,
+      "schueler_id": 18,
+      "frage_nmbr": 3,
+      "student_text": "Platzhalter Antwort 18-3",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 174,
+      "schueler_id": 18,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 18-4",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 175,
+      "schueler_id": 18,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 18-5",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 176,
+      "schueler_id": 18,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 18-6",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 177,
+      "schueler_id": 18,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 18-7",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 178,
+      "schueler_id": 18,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 18-8",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 179,
+      "schueler_id": 18,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 18-9",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 180,
+      "schueler_id": 18,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 18-10",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 181,
+      "schueler_id": 19,
+      "frage_nmbr": 1,
+      "student_text": "Platzhalter Antwort 19-1",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 182,
+      "schueler_id": 19,
+      "frage_nmbr": 2,
+      "student_text": "Platzhalter Antwort 19-2",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 183,
+      "schueler_id": 19,
+      "frage_nmbr": 3,
+      "student_text": "Platzhalter Antwort 19-3",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 184,
+      "schueler_id": 19,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 19-4",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 185,
+      "schueler_id": 19,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 19-5",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 186,
+      "schueler_id": 19,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 19-6",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 187,
+      "schueler_id": 19,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 19-7",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 188,
+      "schueler_id": 19,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 19-8",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 189,
+      "schueler_id": 19,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 19-9",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 190,
+      "schueler_id": 19,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 19-10",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 191,
+      "schueler_id": 20,
+      "frage_nmbr": 1,
+      "student_text": "Platzhalter Antwort 20-1",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 192,
+      "schueler_id": 20,
+      "frage_nmbr": 2,
+      "student_text": "Platzhalter Antwort 20-2",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 193,
+      "schueler_id": 20,
+      "frage_nmbr": 3,
+      "student_text": "Platzhalter Antwort 20-3",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 194,
+      "schueler_id": 20,
+      "frage_nmbr": 4,
+      "student_text": "Platzhalter Antwort 20-4",
+      "is_correct": false,
+      "under_help": false
+    },
+    {
+      "id": 195,
+      "schueler_id": 20,
+      "frage_nmbr": 5,
+      "student_text": "Platzhalter Antwort 20-5",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 196,
+      "schueler_id": 20,
+      "frage_nmbr": 6,
+      "student_text": "Platzhalter Antwort 20-6",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 197,
+      "schueler_id": 20,
+      "frage_nmbr": 7,
+      "student_text": "Platzhalter Antwort 20-7",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 198,
+      "schueler_id": 20,
+      "frage_nmbr": 8,
+      "student_text": "Platzhalter Antwort 20-8",
+      "is_correct": true,
+      "under_help": false
+    },
+    {
+      "id": 199,
+      "schueler_id": 20,
+      "frage_nmbr": 9,
+      "student_text": "Platzhalter Antwort 20-9",
+      "is_correct": true,
+      "under_help": true
+    },
+    {
+      "id": 200,
+      "schueler_id": 20,
+      "frage_nmbr": 10,
+      "student_text": "Platzhalter Antwort 20-10",
+      "is_correct": true,
+      "under_help": false
     }
-  ]
+  ],
+  "tutor_assessments": []
 }

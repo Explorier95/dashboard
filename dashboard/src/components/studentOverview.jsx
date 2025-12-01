@@ -3,115 +3,148 @@ import { useState } from "react";
 import ModalAnswer from "./modalAnswer.jsx";
 import { ElementSquares } from "./squareVariants.jsx";
 import StudentOverviewHeader from "./studentOverviewHeader.jsx";
-import StudentTableHead from "./studentTableHead.jsx"
-import DefaultStudentSort from "./defaultStudentSort.jsx";
+import StudentTableHead from "./studentTableHead.jsx";
 import SortListName from "./sortListName.jsx";
 import SortListPerformance from "./sortListPerformance.jsx";
 /*
-*Sudent Table for the IPN-Dashboard
+*Student Table for the IPN-Dashboard
 *@author Fabian Tappendorf
 */
 function StudentOverview() {
+  const [info, setInfo] = useState(null);
+  const [type, setType] = useState(null);
+  const [studentSort, setStudentSort] = useState("alphabetic");
+  const [questionSort, setQuestionSort] = useState("default");
 
-    const [info, setInfo] = useState(null)
-    const [type, setType] = useState(null)
-    const [sort, setSort] = useState("alphabetic")
+  function countTotalWrong(questionNr) {
+    let amount = 0;
+    const answers = jsonData.schueler_antworten;
 
-    function openDialog(text, type) {
-        setInfo(text)
-        setType(type)
+    for (let i = 0; i < answers.length; i++) {
+      if (answers[i].frage_nmbr === questionNr && !answers[i].is_correct) {
+        amount++;
+      }
     }
+    return amount;
+  }
 
-    function closeDialog() {
-        setInfo(null)
-    }
+  function orderQuestionsWrong() {
+    return jsonData.fragen
+      .map((frage) => ({
+        nmbr: frage.nmbr,
+        title: frage.title,
+        totalWrong: countTotalWrong(frage.nmbr),
+      }))
+      .sort((a, b) => a.totalWrong - b.totalWrong);
+  }
 
-    return (
-        <div>
-            {info && type === "Antwort" ? <ModalAnswer info={info} onClose={closeDialog} type="Antwort" />
-                : info && type === "Frage" ? <ModalAnswer info={info} onClose={closeDialog} type="Frage" /> : ""}
-            <div className={ElementSquares.studentSearchBar}>
-                <h2 className="font-semibold color-gray">Sortieren</h2>
-                <div className="text-[10px]">
-                    <h3 className="font-semibold color-gray">Schüler</h3>
-                    <input
-                        type="checkbox"
-                        className={ElementSquares.checkboxAccent}
-                        checked={sort === "alphabetic"}
-                        onChange={() => setSort(sort === "alphabetic" ? "default" : "alphabetic")}
-                    />
-                    <label className="align-top px-1">Alphabetisch</label>
-                    <input
-                        type="checkbox"
-                        className={ElementSquares.checkboxAccent}
-                        checked={sort === "bestUp"}
-                        onChange={() => setSort(sort === "bestUp" ? "default" : "bestUp")}
-                    />
-                    <label className="align-top px-1">Beste Leistung oben</label>
-                    <input
-                        type="checkbox"
-                        className={ElementSquares.checkboxAccent}
-                        checked={sort === "bestDown"}
-                        onChange={() => setSort(sort === "bestDown" ? "default" : "bestDown")}
-                    />
-                    <label className="align-top px-1">Beste Leistung unten</label></div>
-                <div className="text-[10px]">
-                    <h3 className="font-semibold color-gray">Fragen</h3>
-                    <input
-                        type="checkbox"
-                        className={ElementSquares.checkboxAccent}
-                        checked={sort === "difficulty"}
-                        onChange={() => setSort(sort === "difficulty" ? "default" : "difficulty")}
-                    />
-                    <label className="align-top px-1">Schwierigste Frage rechts</label></div>
-            </div>
-            {/* Importet Component */}
-            <StudentOverviewHeader
+  const orderedQuestions =
+    questionSort === "difficulty" ? orderQuestionsWrong() : jsonData.fragen;
+
+  function openDialog(text, type) {
+    setInfo(text);
+    setType(type);
+  }
+
+  function closeDialog() {
+    setInfo(null);
+  }
+
+  return (
+    <div className={ElementSquares.studentContainer}>
+      {info && type === "Antwort" ? (
+        <ModalAnswer info={info} onClose={closeDialog} type="Antwort" />
+      ) : info && type === "Frage" ? (
+        <ModalAnswer info={info} onClose={closeDialog} type="Frage" />
+      ) : (
+        ""
+      )}
+      <div className={ElementSquares.studentSearchBar}>
+        <h2 className="font-semibold color-gray">Sortieren</h2>
+        <div className="flex flex-col gap-2 text-[10px]">
+          <div className="flex flex-wrap items-center gap-2">
+            <h3 className="font-semibold color-gray mr-2">Schüler</h3>
+            <input
+              type="checkbox"
+              className={ElementSquares.checkboxAccent}
+              checked={studentSort === "alphabetic"}
+              onChange={() =>
+                setStudentSort(
+                  studentSort === "alphabetic" ? "default" : "alphabetic"
+                )
+              }
             />
-            <div className={ElementSquares.studentMain}>
-                <table className={ElementSquares.studentTableMain}>
-                    {sort === "alphabetic" ? (
-                        <SortListName list={jsonData} funktion={openDialog} />
-                    ) : sort === "bestUp" || sort === "bestDown" ? (
-                        <>
-                            <StudentTableHead
-                                className={ElementSquares.studentTableHeadDynamic}
-                                funktion={openDialog}
-                                list={jsonData}
-                                orderBy={sort}
-                            />
-                            <SortListPerformance
-                                list={jsonData}
-                                funktion={openDialog}
-                                direction={sort}
-                            />
-                        </>
-                    ) : sort === "difficulty" ? (<>
-                        <StudentTableHead
-                            className={ElementSquares.studentTableHeadDynamic}
-                            funktion={openDialog}
-                            list={jsonData}
-                            orderBy={sort}
-                        />
-
-                    </>
-                    ) : (
-                        <>
-                            <StudentTableHead
-                                className={ElementSquares.studentTableHeadDynamic}
-                                funktion={openDialog}
-                                list={jsonData}
-                                orderBy={sort}
-                            />
-                        </>
-                    )}
-                </table>
-            </div>
-        </div >
-
-
-    );
-
-
+            <label className="align-top px-1">Alphabetisch</label>
+            <input
+              type="checkbox"
+              className={ElementSquares.checkboxAccent}
+              checked={studentSort === "bestUp"}
+              onChange={() =>
+                setStudentSort(studentSort === "bestUp" ? "default" : "bestUp")
+              }
+            />
+            <label className="align-top px-1">Beste Leistung oben</label>
+            <input
+              type="checkbox"
+              className={ElementSquares.checkboxAccent}
+              checked={studentSort === "bestDown"}
+              onChange={() =>
+                setStudentSort(
+                  studentSort === "bestDown" ? "default" : "bestDown"
+                )
+              }
+            />
+            <label className="align-top px-1">Beste Leistung unten</label>
+          </div>
+          <div className="flex flex-wrap items-center gap-2">
+            <h3 className="font-semibold color-gray mr-2">Fragen</h3>
+            <input
+              type="checkbox"
+              className={ElementSquares.checkboxAccent}
+              checked={questionSort === "difficulty"}
+              onChange={() =>
+                setQuestionSort(
+                  questionSort === "difficulty" ? "default" : "difficulty"
+                )
+              }
+            />
+            <label className="align-top px-1">Schwierigste Frage rechts</label>
+          </div>
+        </div>
+      </div>
+      {/* Imported Component */}
+      <div className={ElementSquares.studentMain}>
+        <div className="w-full">
+          <StudentOverviewHeader />
+          <div className={ElementSquares.studentTableScroll}>
+            <table className={ElementSquares.studentTableMain}>
+              <StudentTableHead
+                className={ElementSquares.studentTableHeadDynamic}
+                funktion={openDialog}
+                list={jsonData}
+                orderBy={questionSort === "difficulty" ? "difficulty" : "default"}
+                orderedQuestions={orderedQuestions}
+              />
+              {studentSort === "alphabetic" || studentSort === "default" ? (
+                <SortListName
+                  list={jsonData}
+                  funktion={openDialog}
+                  showHeader={false}
+                  questionOrder={orderedQuestions}
+                />
+              ) : (
+                <SortListPerformance
+                  list={jsonData}
+                  funktion={openDialog}
+                  direction={studentSort}
+                  questionOrder={orderedQuestions}
+                />
+              )}
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
-export default StudentOverview
+export default StudentOverview;

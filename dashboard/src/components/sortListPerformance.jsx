@@ -3,7 +3,7 @@ import { ElementSquares, SquareColor } from "./squareVariants.jsx";
 *sorting algorithm for the IPN-Dashboard
 *@author Fabian Tappendorf
 */
-export default function SortListPerformance({ list, funktion, direction }) {
+export default function SortListPerformance({ list, funktion, direction, questionOrder = null }) {
     //Ermittel die Punkte 
     function countStudentPoints(studentId, list) {
         let points = 0
@@ -76,13 +76,22 @@ export default function SortListPerformance({ list, funktion, direction }) {
             {sortedSchueler.map((student, index) => (<tbody key={index} >
                 <tr>
                     <td className={ElementSquares.studentTableData}>{student.vorname}</td>
-                    {list.schueler_antworten
-                        .filter(antwort => antwort.schueler_id === student.id)
-                        .map((antwort, index) => (
-                            <td key={index}>
-                                {SquareColor(antwort, funktion)}
-                            </td>
-                        ))}
+                    {(questionOrder
+                        ? questionOrder.map((frage) =>
+                            list.schueler_antworten.find(
+                                (antwort) =>
+                                    antwort.schueler_id === student.id &&
+                                    antwort.frage_nmbr === frage.nmbr
+                            )
+                        )
+                        : list.schueler_antworten.filter(
+                            (antwort) => antwort.schueler_id === student.id
+                        )
+                    ).map((antwort, index) => (
+                        <td key={index} className={ElementSquares.studentTableData}>
+                            {antwort ? SquareColor(antwort, funktion) : null}
+                        </td>
+                    ))}
                 </tr>
             </tbody>))}
         </>
