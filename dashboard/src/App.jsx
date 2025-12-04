@@ -27,9 +27,9 @@ const App = () => {
       {/* Dashboard Dragable version */}
         <SlidingSquare><StudentOverview />
                 <PieChart
-    richtig={12}
-    falsch={5}
-    richtigNachHilfe={3}
+    richtig={6}
+    falsch={4}
+    richtigNachHilfe={2}
 />
         </SlidingSquare>
       </div>

@@ -1,6 +1,6 @@
 import { ElementSquares } from "./squareVariants.jsx";
-import DefaultStudentSort from "./defaultStudentSort.jsx";
-import SortByQuestion from "./sortByQuestion.jsx";
+import { DefaultStudentSort, SortByQuestion} from "./Sort.jsx";
+
 /*
 *Table Head with sorting function for the IPN-Dashboard
 *@author Fabian Tappendorf

@@ -2,11 +2,10 @@ import jsonData from "../static/json_fuer_fabian_cba_dashboard.json";
 import { useState } from "react";
 import ModalAnswer from "./modalAnswer.jsx";
 import { ElementSquares } from "./squareVariants.jsx";
+import { SortList, SortListPerformance } from "./Sort.jsx";
 import StudentOverviewHeader from "./studentOverviewHeader.jsx";
 import StudentTableHead from "./studentTableHead.jsx"
-import DefaultStudentSort from "./defaultStudentSort.jsx";
-import SortListName from "./sortListName.jsx";
-import SortListPerformance from "./sortListPerformance.jsx";
+
 /*
 *Sudent Table for the IPN-Dashboard
 *@author Fabian Tappendorf
@@ -71,7 +70,7 @@ function StudentOverview() {
             <div className={ElementSquares.studentMain}>
                 <table className={ElementSquares.studentTableMain}>
                     {sort === "alphabetic" ? (
-                        <SortListName list={jsonData} funktion={openDialog} />
+                        <SortList list={jsonData} funktion={openDialog} />
                     ) : sort === "bestUp" || sort === "bestDown" ? (
                         <>
                             <StudentTableHead
