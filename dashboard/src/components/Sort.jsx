@@ -1,4 +1,4 @@
-import { ElementSquares, SquareColor } from "./squareVariants.jsx";
+import { ElementSquares, SquareColor, gridElements } from "./stylingVariants.jsx";
 import StudentTableHead from "./studentTableHead.jsx";
 /*
 *all sorting functions for the IPN-Dashboard
@@ -49,7 +49,7 @@ export function SortList({ list, funktion }) {
     return (
         <>
             <StudentTableHead
-                className={ElementSquares.studentTableHeadDynamic}
+                className={gridElements.gridElementLookDynamic}
                 funktion={funktion}
                 list={list}
             />

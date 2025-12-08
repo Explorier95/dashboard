@@ -1,4 +1,4 @@
-import { ElementSquares, ColorSquare } from "./squareVariants"
+import { ElementSquares, ColorSquare } from "./stylingVariants"
 import Table from "./table"
 /*
 *Header Component for the studentOverview

@@ -4,7 +4,9 @@ import Header from "./components/header";
 import MotionExamples from "./examples/motionExamples"
 import PieChart from "./components/pieOverview.jsx";
 import SlidingSquare from "./components/slidingSquare"
-import {ElementSquares} from "./components/squareVariants.jsx";
+import { ElementSquares } from "./components/stylingVariants.jsx";
+import Dropdown from "./components/Dropdown.jsx";
+import Concepts from "./components/Concepts.jsx";
 /*
 *Application for the IPN-Dashboard
 *@author Fabian Tappendorf
@@ -22,15 +24,27 @@ const App = () => {
 
       {/* Dashboard Section */}
       <div className={ElementSquares.appJustifyCenter}>
-        <StudentOverview />
+        {/* Only the studentOverview Component */}
+        {/* <StudentOverview /> */}
 
-      {/* Dashboard Dragable version */}
+        {/* Dashboard Dragable version */}
         <SlidingSquare><StudentOverview />
-                <PieChart
-    richtig={6}
-    falsch={4}
-    richtigNachHilfe={2}
-/>
+          <PieChart
+            richtig={6}
+            falsch={4}
+            richtigNachHilfe={2}
+          />
+          <Dropdown
+            name="mehr..."
+            options={['Zusammenfassung der Klassenleistung', 'Was lief gut?', 'Wo ist Verbesserungsbedarf?']}
+            onSelect={(value) => console.log(`Selected optoin: ${value}`)}
+          />
+          <Concepts 
+          concepts={  [
+ { title: "Aufgabe 1", value: 0.65 },
+ { title: "Aufgabe 2", value: 0.78 },
+ { title: "Aufgabe 3", value: 0.53 }
+ ] }/>
         </SlidingSquare>
       </div>
 

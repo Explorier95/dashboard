@@ -3,9 +3,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@theme {
+  --color-ipn-dark: #0D2345;
+  --color-ipn-primary: #006BA6;
+  --color-ipn-bg: #F7F8FA;
+  --color-ipn-text: #1F2833;
+  --color-ipn-light: #FFFFFF;
+  --color-ipn-accent: #F39C12;
+}
 
 body {
-  @apply bg-slate-900;
+  @apply bg-ipn-dark;
  
 }
 

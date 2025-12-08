@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { useRef } from "react";
+import {gridElements} from "./stylingVariants.jsx";
+/*
+*Component that enables dragging of its children within a defined area
+*@author Fabian Tappendorf
+*/
 
 function SlidingSquare({ children }) {
 
@@ -11,7 +16,7 @@ function SlidingSquare({ children }) {
     <>
       <div
         ref={constraintsRef}
-        className="bg-slate-800 w-[800px] h-[800px] rounded-lg relative flex gap-4 p-4 flex-wrap"
+        className={gridElements.grid}
       >
         {React.Children.map(children, (child, index) => (
           <motion.div

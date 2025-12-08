@@ -1,4 +1,4 @@
-import { ElementSquares } from "./squareVariants.jsx";
+import { gridElements } from "./stylingVariants.jsx";
 import { DefaultStudentSort, SortByQuestion} from "./Sort.jsx";
 
 /*
@@ -57,7 +57,7 @@ export default function StudentTableHead({ className, funktion, list, orderBy })
                 <tr>
                     <th className={className}>Schüler</th>
                     {orderedList.map((frage, index) => (<th key={index}
-                        className={ElementSquares.studentTableHeadDynamic}
+                        className={gridElements.gridElementLookDynamic}
                         onClick={() => funktion(frage.title, "Frage")}>{frage.nmbr}</th>))}
                 </tr>
             </thead>

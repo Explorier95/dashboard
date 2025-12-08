@@ -1,7 +1,7 @@
 import jsonData from "../static/json_fuer_fabian_cba_dashboard.json";
 import { useState } from "react";
 import ModalAnswer from "./modalAnswer.jsx";
-import { ElementSquares } from "./squareVariants.jsx";
+import { ElementSquares, gridElements } from "./stylingVariants.jsx";
 import { SortList, SortListPerformance } from "./Sort.jsx";
 import StudentOverviewHeader from "./studentOverviewHeader.jsx";
 import StudentTableHead from "./studentTableHead.jsx"
@@ -74,7 +74,7 @@ function StudentOverview() {
                     ) : sort === "bestUp" || sort === "bestDown" ? (
                         <>
                             <StudentTableHead
-                                className={ElementSquares.studentTableHeadDynamic}
+                                className={gridElements.gridElementLookDynamic}
                                 funktion={openDialog}
                                 list={jsonData}
                                 orderBy={sort}
@@ -87,7 +87,7 @@ function StudentOverview() {
                         </>
                     ) : sort === "difficulty" ? (<>
                         <StudentTableHead
-                            className={ElementSquares.studentTableHeadDynamic}
+                            className={gridElements.gridElementLookDynamic}
                             funktion={openDialog}
                             list={jsonData}
                             orderBy={sort}
@@ -97,7 +97,7 @@ function StudentOverview() {
                     ) : (
                         <>
                             <StudentTableHead
-                                className={ElementSquares.studentTableHeadDynamic}
+                                className={gridElements.gridElementLookDynamic}
                                 funktion={openDialog}
                                 list={jsonData}
                                 orderBy={sort}

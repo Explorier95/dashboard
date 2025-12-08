@@ -10,20 +10,20 @@ export default function PieChart({ richtig, falsch, richtigNachHilfe }) {
     // Diagramm-Parameter
     const size = 220;                  // etwas größer, damit nichts abgeschnitten wird
     const radius = size / 2;
-    const strokeWidth = 24;            // kleiner, damit genügend Platz bleibt
+    const strokeWidth = 34;            // kleiner, damit genügend Platz bleibt
     const circleRadius = radius - strokeWidth; 
     const circumference = 2 * Math.PI * circleRadius;
 
     const segments = [
         { value: richtig, color: "#16a34a" },
         { value: falsch, color: "#dc2626" },
-        { value: richtigNachHilfe, color: "#e8eb25ff" },
+        { value: richtigNachHilfe, color: "#ffe100ff" },
     ];
 
     let offset = 0;
 
     return (
-        <div className="flex flex-col items-center bg-stone-100 p-4 rounded-xl ring-2 ring-blue-500/50">
+        <div className="flex flex-col items-center bg-stone-100 backdrop-blur-md p-6 rounded-2xl shadow-lg ring-4 ring-blue-500/30">
             <svg
                 width={size}
                 height={size}
@@ -70,7 +70,7 @@ export default function PieChart({ richtig, falsch, richtigNachHilfe }) {
                     <span>Falsch: {falsch}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 rounded-sm bg-yellow-300"></div>
+                    <div className="w-4 h-4 rounded-sm bg-yellow-400"></div>
                     <span>Richtig nach Hilfe: {richtigNachHilfe}</span>
                 </div>
             </div>
