@@ -1,4 +1,4 @@
-import { gridElements } from "./stylingVariants.jsx";
+import { gridElements } from "./styling/stylingVariants.jsx";
 import { DefaultStudentSort, SortByQuestion} from "./Sort.jsx";
 
 /*
@@ -53,7 +53,6 @@ export default function StudentTableHead({ className, funktion, list, orderBy })
     return (
         <>
             <thead>
-                {console.log(orderBy)}
                 <tr>
                     <th className={className}>Schüler</th>
                     {orderedList.map((frage, index) => (<th key={index}

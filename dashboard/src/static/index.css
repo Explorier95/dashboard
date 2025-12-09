@@ -10,10 +10,10 @@
   --color-ipn-text: #1F2833;
   --color-ipn-light: #FFFFFF;
   --color-ipn-accent: #F39C12;
+  --color-ipn-right: #28A745;
+  --color-ipn-wrong: #DC3545;
+  --color-ipn-right-with-help: #FFC107;
 }
 
-body {
-  @apply bg-ipn-dark;
- 
-}
+
 

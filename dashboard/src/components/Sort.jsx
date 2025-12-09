@@ -1,4 +1,4 @@
-import { ElementSquares, SquareColor, gridElements } from "./stylingVariants.jsx";
+import { ElementSquares, SquareColor, gridElements } from "./styling/stylingVariants.jsx";
 import StudentTableHead from "./studentTableHead.jsx";
 /*
 *all sorting functions for the IPN-Dashboard
@@ -15,6 +15,8 @@ export function SortByQuestion({ list, funktion, newQuestionList }) {
         ? newQuestionList.map(i => i.nmbr)
         : [];
 
+    let squareColorElement = SquareColor(undefined, funktion); // initialer Wert für Grauen Kasten wenn keine Antwort vorliegt
+
     return (
         <tbody>
             {list.schueler.map(student => (
@@ -25,10 +27,10 @@ export function SortByQuestion({ list, funktion, newQuestionList }) {
                         const ans = list.schueler_antworten.find(
                             a => a.schueler_id === student.id && a.frage_nmbr === question.nmbr
                         );
-
+                        { ans === undefined ? squareColorElement = SquareColor(undefined, funktion) : squareColorElement = SquareColor(ans, funktion) }
                         return (
                             <td key={question.nmbr}>
-                                {SquareColor(ans, funktion)}
+                                {squareColorElement}
                             </td>
                         );
                     })}
@@ -59,13 +61,16 @@ export function SortList({ list, funktion }) {
                     <tbody key={index}>
                         <tr>
                             <td className={ElementSquares.studentTableData}>{student.vorname}</td>
-                            {schueler_antworten
-                                .filter(antwort => antwort.schueler_id === student.id)
-                                .map((antwort, index) => (
-                                    <td key={index}>
-                                        {SquareColor(antwort, funktion)}
-                                    </td>
-                                ))}
+                            { 
+                                schueler_antworten
+                                    .filter(antwort => antwort.schueler_id === student.id)
+                                    .map((antwort, index) => (
+                                        <td key={index}>
+                                            {SquareColor(antwort, funktion)}
+                                        </td>
+                                    ))
+                            }
+
                         </tr>
                     </tbody>
                 ))}
@@ -127,7 +132,6 @@ export function SortListPerformance({ list, funktion, direction }) {
     function sortAfterDirection(upOdown, listElement) {
 
         let whatDirection
-        console.log(upOdown)
 
         if (upOdown === "bestUp") {
             whatDirection = bestStudentUp(listElement)
