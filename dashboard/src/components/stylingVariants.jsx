@@ -53,7 +53,7 @@ export const ElementSquares = {
     //heading with explanation
     studentTableHeaderDiv: "flex items-center gap-1 m-2  ",
     studentTableHeaderTable: "border-spacing-x-20 ",
-    studentTableHeaderText: "text-nowrap text-white text-[10px] ...",
+    studentTableHeaderText: "text-nowrap text-white text-[12px] ...",
 
     //checkbox
     checkboxAccent: "accent-blue-900"

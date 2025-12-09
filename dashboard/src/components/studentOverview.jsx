@@ -31,7 +31,7 @@ function StudentOverview() {
                 : info && type === "Frage" ? <ModalAnswer info={info} onClose={closeDialog} type="Frage" /> : ""}
             <div className={ElementSquares.studentSearchBar}>
                 <h2 className="font-semibold color-gray">Sortieren</h2>
-                <div className="text-[10px]">
+                <div className="text-[12px]">
                     <h3 className="font-semibold color-gray">Schüler</h3>
                     <input
                         type="checkbox"
@@ -54,7 +54,7 @@ function StudentOverview() {
                         onChange={() => setSort(sort === "bestDown" ? "default" : "bestDown")}
                     />
                     <label className="align-top px-1">Beste Leistung unten</label></div>
-                <div className="text-[10px]">
+                <div className="text-[12px]">
                     <h3 className="font-semibold color-gray">Fragen</h3>
                     <input
                         type="checkbox"

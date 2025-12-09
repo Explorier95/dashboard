@@ -10,9 +10,13 @@ export default function PieChart({ richtig, falsch, richtigNachHilfe }) {
     // Diagramm-Parameter
     const size = 220;                  // etwas größer, damit nichts abgeschnitten wird
     const radius = size / 2;
-    const strokeWidth = 34;            // kleiner, damit genügend Platz bleibt
-    const circleRadius = radius - strokeWidth; 
+    const strokeWidth = 32;            // kleiner, damit genügend Platz bleibt
+    const circleRadius = radius - strokeWidth;
     const circumference = 2 * Math.PI * circleRadius;
+    const innerCircleRadius = radius;
+    const innerCircleCircleRaius = innerCircleRadius - (strokeWidth - 1) / 2;
+    const outerCircleRadius = 150/2;
+    const outerCircleCircleRaius = outerCircleRadius - (strokeWidth - 5) / 2;
 
     const segments = [
         { value: richtig, color: "#16a34a" },
@@ -21,6 +25,7 @@ export default function PieChart({ richtig, falsch, richtigNachHilfe }) {
     ];
 
     let offset = 0;
+
 
     return (
         <div className="flex flex-col items-center bg-stone-100 backdrop-blur-md p-6 rounded-2xl shadow-lg ring-4 ring-blue-500/30">
@@ -41,24 +46,44 @@ export default function PieChart({ richtig, falsch, richtigNachHilfe }) {
                         offset += dash;
 
                         return (
-                            <motion.circle
-                                key={i}
-                                cx={radius}
-                                cy={radius}
-                                r={circleRadius}
-                                fill="transparent"
-                                stroke={seg.color}
-                                strokeWidth={strokeWidth}
-                                strokeDasharray={`${dash} ${gap}`}
-                                strokeDashoffset={-localOffset}
-                                initial={{ strokeDasharray: `0 ${circumference}` }}
-                                animate={{ strokeDasharray: `${dash} ${gap}` }}
-                                transition={{ duration: 1, ease: "easeOut" }}
-                            />
+                            <>
+                                <circle
+                                    cx={innerCircleRadius}
+                                    cy={innerCircleRadius}
+                                    r={innerCircleCircleRaius}
+                                    fill="transparent"
+                                    stroke="#0D2345"
+                                    strokeWidth="1"
+                                />
+
+                                <circle
+                                    cx={110}
+                                    cy={110}
+                                    r={outerCircleCircleRaius}
+                                    fill="transparent"
+                                    stroke="#0D2345"
+                                    strokeWidth="1"
+                                />
+
+                                <motion.circle
+                                    key={i}
+                                    cx={radius}
+                                    cy={radius}
+                                    r={circleRadius}
+                                    fill="transparent"
+                                    stroke={seg.color}
+                                    strokeWidth={strokeWidth}
+                                    strokeDasharray={`${dash} ${gap}`}
+                                    strokeDashoffset={-localOffset}
+                                    initial={{ strokeDasharray: `0 ${circumference}` }}
+                                    animate={{ strokeDasharray: `${dash} ${gap}` }}
+                                    transition={{ duration: 1, ease: "easeOut" }}
+                                /></>
                         );
                     })}
                 </g>
             </svg>
+
 
             <div className="mt-4 space-y-1 text-sm">
                 <div className="flex items-center gap-2">
