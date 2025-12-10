@@ -20,8 +20,8 @@ export default function OverView() {
             />
             <br></br>
             {selectedOption === "Zusammenfassung der Klassenleistung" ?
-
-                <div >
+                
+                <div className={gridElements.gridMain}>
                     <h2 className={textStyles.headlineMediumCenter}>Gesammtübersicht der Klasse</h2>
 
                     <p className={textStyles.paragraph}>dummy</p>
