@@ -36,18 +36,22 @@ export const ColorSquare = {
 }
 
 export const gridElements = {
+    flex: "flex flex-col mt-4 mb-8 flex-qrap gap-4 ",
     grid: "relative grid grid-cols-2 auto-rows-min gap-4 ",
-    gridMain: "bg-stone-100 rounded-lg justify-center flex items-center gap-10 mb-4 ring-2 ring-ipn-primary",
+    gridAlt: "grid grid-cols-2 grid-flow-col auto-rows-max auto-rows-max gap-6 bg-slate-800",
+    gridAltNoCol: "grid grid-cols grid-flow-col auto-rows-max auto-rows-max gap-6",
+    gridMore: "bg-stone-100 rounded-lg justify-center grid auto-rows-min gap-4 ring-ipn-primary p-6 ring-2 ",
+    gridMain: "bg-stone-100 rounded-lg justify-center flex items-center gap-10 mb-2 ring-2 ring-ipn-primary",
     gridConcepts: "gap-6 bg-stone-100 backdrop-blur-md p-6 rounded-2xl ring-2 ring-ipn-primary ",
     gridPieChart: "flex flex-col items-center bg-stone-100 backdrop-blur-md p-6 rounded-2xl shadow-lg ring-2 ring-ipn-primary",
     flexMain: "bg-slate-800 w-[800px] h-[800px] rounded-lg relative flex gap-4 p-4 flex-wrap",
     gridElementLook: "bg-slate-700 rounded-lg p-4 flex flex-col items-center justify-center text-white text-center",
-    gridElementLookDynamic: "border-b border-gray-300 px-1 py-1 hover:bg-ipn-light text-sm font-semibold text-bg-ipn-text"
+    gridElementLookDynamic: "border-b border-gray-300 px-1 py-1 hover:bg-ipn-light hover:font-bold text-sm font-semibold text-bg-ipn-text"
 }
 
 export const ElementSquares = {
     //app content
-    appMain: "flex flex-col gap-10 overflow-x-hidden",
+    appMain: "flex flex-col gap-10 overflow-x-hidden  ",
     appJustifyCenter: "justify-items-center",
 
     //studentOverview  content

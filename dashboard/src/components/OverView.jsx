@@ -1,4 +1,4 @@
-import { gridElements, textStyles } from "../styling/stylingVariants"
+import { gridElements, textStyles } from "./styling/stylingVariants.jsx"
 import Dropdown from "./Dropdown.jsx"
 import { useState } from "react";
 /*

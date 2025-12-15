@@ -1,4 +1,4 @@
-import { gridElements } from "../styling/stylingVariants";
+import { gridElements } from "./styling/stylingVariants";
 
 export default function Dropdown({name, options, onSelect}) {
     
