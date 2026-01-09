@@ -3,10 +3,11 @@ import DynamixText from "./components/dynamicText";
 import Header from "./components/header";
 import PieChart from "./components/main/pieOverview.jsx";
 import Layout from "./components/Laylout.jsx"
-import { ElementSquares, gridElements } from "./components/styling/stylingVariants.jsx";
+import { ElementSquares } from "./components/styling/stylingVariants.jsx";
 import Concepts from "./components/main/Concepts.jsx";
 import Akkordeon from "./components/main/Akkordeon.jsx";
 /*
+*@description
 *Main application for the IPN-Dashboard
 *@author Fabian Tappendorf
 */
@@ -42,14 +43,9 @@ const App = () => {
 
       {/* Dashboard Section */}
       <div className="">
-        {/* Only the studentOverview Component */}
-        {/* <StudentOverview /> */}
-
-        {/* Dashboard Dragable version */}
         <Layout>
           <StudentOverview />
-        
-        
+             
           <PieChart
             richtig={6}
             falsch={4}
@@ -67,11 +63,6 @@ const App = () => {
             content={akkordeonData}
           />
         </Layout>
-
-
-
-
-
 
       </div>
 

@@ -1,7 +1,10 @@
+
+import StudentOverviewHeader from "../studentOverviewHeader.jsx";
 import { ElementSquares } from "../styling/stylingVariants.jsx";
 import { SquareColor } from "../styling/stylingVariants.jsx";
-export function StudentTableBody({ students, questions, answers, funktion }) {
+export function StudentTableBody({ students, questions, answers, funktion}) {
     return (
+        <>
         <tbody>
             {students.map(student => (
                 <tr key={student.id}>
@@ -25,5 +28,9 @@ export function StudentTableBody({ students, questions, answers, funktion }) {
                 </tr>
             ))}
         </tbody>
+        </>
+        
+        
+        
     );
 }

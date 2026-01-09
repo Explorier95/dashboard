@@ -36,6 +36,7 @@ export const ColorSquare = {
 }
 
 export const gridElements = {
+    main:"grid auto-rows grid-cols-2 gap-4 mx-40",
     flex: "flex flex-col mt-4 mb-8 flex-qrap gap-4 ",
     grid: "relative grid grid-cols-2 auto-rows-min gap-4 ",
     gridAlt: "grid grid-cols-2 grid-flow-col auto-rows-max auto-rows-max gap-6 bg-slate-800",
@@ -55,16 +56,18 @@ export const ElementSquares = {
     appJustifyCenter: "justify-items-center",
 
     //studentOverview  content
+    studentSortTableGap: "grid gap-4 mb-2 ",
     studentSearchBar: "bg-stone-100 rounded-lg justify-center items-center gap-4 mb-1 p-2 ring-2 ring-ipn-primary",
     studentMain: "bg-stone-100 rounded-lg justify-center flex items-center gap-10 mb-4 ring-2 ring-ipn-primary",
-    studentTableMain: "table-auto m-4 ",
+    studentTableMain: "m-4",
     studentTableHeadStatic: "border border-gray-300 px-1 py-1 text-left...",
     studentTableData: "text-center text-sm",
 
     //heading with explanation
-    studentTableHeaderDiv: "flex items-center gap-1 m-2  ",
+    studentTableHeaderDiv: "flex items-center gap-1 m-2",
     studentTableHeaderTable: "border-spacing-x-20 ",
-    studentTableHeaderText: "text-nowrap text-bg-ipn-text text-[13px] ...",
+    studentTableHeaderText: "text-nowrap text-bg-ipn-text text-[13px]...",
+    studenTableFooter: "border-t border-gray-300 px-1 py-1 ",
 
     //checkbox
     checkboxAccent: "bg-ipn-dark"

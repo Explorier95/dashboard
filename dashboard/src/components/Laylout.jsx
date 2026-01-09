@@ -1,6 +1,9 @@
 import React from "react";
+import { gridElements } from "./styling/stylingVariants";
 /*
-*Component that enables dragging of its children within a defined area
+*@description
+*This component arranges its children in a grid layout where the first child spans two rows,
+*creating a visually appealing "bento" style arrangement.
 *@author Fabian Tappendorf
 */
 
@@ -11,7 +14,7 @@ export default function Layout({ children }) {
   }));
 
   return (
-    <div className="grid auto-rows grid-cols-2 gap-4 mx-40">
+    <div className={gridElements.main}>
       {items.map((item, index) => (
         <div
           key={item.id}
