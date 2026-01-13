@@ -3,7 +3,6 @@ import { useState } from "react";
 import ModalAnswer from "../modalAnswer.jsx";
 import { ElementSquares, gridElements, textStyles, ColorSquare } from "../styling/stylingVariants.jsx";
 import { StudentTableBody } from "./StudentTableBody.jsx";
-import StudentOverviewHeader from "../studentOverviewHeader.jsx";
 import StudentTableHead from "./studentTableHead.jsx"
 
 /*

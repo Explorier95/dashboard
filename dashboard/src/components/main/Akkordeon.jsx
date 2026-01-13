@@ -5,11 +5,12 @@ export default function Akkordeon({ content }) {
 
     const [open, setOpen] = useState(false);
 
-    const contentList = content || [];
+    const contentData = content || {};
+    const sections = Object.values(contentData);
 
     return (
         <div className={gridElements.gridMore}>
-            {contentList.map((item, index) => (
+            {sections.map((item, index) => (
                 <div key={index} className="border-b border-gry-300 mb-2">
                     <button onClick={() => setOpen(open === index ? false : index)} className="w-full text-left py-4 px-2 flex justify-between items-center focus:outline-none">
                         <span className="font-medium text-lg hover:font-bold rounded-2xl">{item.title}</span>

@@ -6,6 +6,7 @@ import Layout from "./components/Laylout.jsx"
 import { ElementSquares } from "./components/styling/stylingVariants.jsx";
 import Concepts from "./components/main/Concepts.jsx";
 import Akkordeon from "./components/main/Akkordeon.jsx";
+import summaryData from "./static/summaryData.json";
 /*
 *@description
 *Main application for the IPN-Dashboard
@@ -14,25 +15,7 @@ import Akkordeon from "./components/main/Akkordeon.jsx";
 
 const App = () => {
 
-  //Data for the Akkordeon Component - should be dynamic in the future
-  const akkordeonData = [{
-    title: "Zusammenfassung der Klassenleistung",
-    content: [
-      { summary: "Was ist Barrierefreiheit?", text: "Barrierefreiheit bedeutet, dass Produkte, Dienstleistungen und Umgebungen so gestaltet sind, dass sie von allen Menschen genutzt werden können, unabhängig von ihren Fähigkeiten oder Einschränkungen." },
-      { summary: "Warum ist Barrierefreiheit wichtig?", text: "Barrierefreiheit ist wichtig, um sicherzustellen, dass alle Menschen gleichberechtigten Zugang zu Informationen und Dienstleistungen haben. Sie fördert Inklusion und Chancengleichheit." },
-      { summary: "Wie kann Barrierefreiheit umgesetzt werden?", text: "Barrierefreiheit kann durch die Einhaltung von Richtlinien und Standards, wie z.B. der WCAG (Web Content Accessibility Guidelines), sowie durch die Berücksichtigung der Bedürfnisse von Menschen mit Behinderungen bei der Gestaltung von Produkten und Dienstleistungen umgesetzt werden." }
-    ]
-  }, {
-    title: "Was lief gut?", content: [
-      { summary: "Kohlenstoffkreislauf", text: "Datenschutz bezieht sich auf den Schutz personenbezogener Daten vor unbefugtem Zugriff, Verwendung oder Offenlegung. Er umfasst Maßnahmen und Richtlinien, die sicherstellen, dass persönliche  Informationen sicher und vertraulich behandelt werden." },
-      { summary: "Warum ist Datenschutz wichtig?", text: "Datenschutz ist wichtig, um die Privatsphäre und Rechte von Einzelpersonen zu schützen. Er hilft, Identitätsdiebstahl, Betrug und Missbrauch persönlicher Daten zu verhindern und fördert das Vertrauen in digitale Dienste." },
-      { summary: "Wie kann Datenschutz gewährleistet werden?", text: "Datenschutz kann durch die Implementierung von Sicherheitsmaßnahmen, wie z.B. Verschlüsselung und Zugriffskontrollen, sowie durch die Einhaltung von Datenschutzgesetzen und -richtlinien gewährleistet werden. Es ist auch wichtig, dass Organisationen transparent über ihre Datenpraktiken informieren." }]
-  }, {
-    title: "Wo ist noch Unterstützungsbedarf?", content: [
-      { summary: "Weltfrieden", text: "Datenschutz bezieht sich auf den Schutz personenbezogener Daten vor unbefugtem Zugriff, Verwendung oder Offenlegung. Er umfasst Maßnahmen und Richtlinien, die sicherstellen, dass persönliche  Informationen sicher und vertraulich behandelt werden." },
-      { summary: "Warum ist Datenschutz wichtig?", text: "Datenschutz ist wichtig, um die Privatsphäre und Rechte von Einzelpersonen zu schützen. Er hilft, Identitätsdiebstahl, Betrug und Missbrauch persönlicher Daten zu verhindern und fördert das Vertrauen in digitale Dienste." },
-      { summary: "Wie kann Datenschutz gewährleistet werden?", text: "Datenschutz kann durch die Implementierung von Sicherheitsmaßnahmen, wie z.B. Verschlüsselung und Zugriffskontrollen, sowie durch die Einhaltung von Datenschutzgesetzen und -richtlinien gewährleistet werden. Es ist auch wichtig, dass Organisationen transparent über ihre Datenpraktiken informieren." }]
-  }]
+  const akkordeonDataFromJSON = summaryData;
 
   return (
 
@@ -60,7 +43,7 @@ const App = () => {
             ]} />
 
           <Akkordeon
-            content={akkordeonData}
+            content={akkordeonDataFromJSON}
           />
         </Layout>
 
