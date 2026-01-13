@@ -1,4 +1,4 @@
-export default function Table({ tableHead, tableBody, tableFooter, tableCaption, tableClassName, TagName = 'div', ...props }) {
+export default function Table({ tableHead, tableBody, tableFooter, tableCaption, tableClassName, bodyClassName,  TagName = 'div', ...props }) {
 /*
 *@description
 *Interface für Tables
@@ -14,7 +14,7 @@ export default function Table({ tableHead, tableBody, tableFooter, tableCaption,
                             {tableHead}
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className={bodyClassName}>
                         <tr>
                             {tableBody}
                         </tr>

@@ -52,12 +52,15 @@ export const gridElements = {
 
 export const ElementSquares = {
     //app content
-    appMain: "flex flex-col gap-10 overflow-x-hidden  ",
+    appMain: "flex flex-col gap-10 overflow-x-hidden ",
+    selectionMain: "justify-items-center ",
+    selectionBody: "flex justify-center items-center gap-20 mb-2 p-4 bg-stone-100 rounded-lg ",
+    selectionData: "bg-white ring-2 ring-ipn-primary rounded-md px-10 py-3 shadow-sm hover:bg-ipn-primary/10 transition-colors ",
     appJustifyCenter: "justify-items-center",
 
     //studentOverview  content
     studentSortTableGap: "grid gap-4 mb-2 ",
-    studentSearchBar: "bg-stone-100 rounded-lg justify-center items-center gap-4 mb-1 p-2 ring-2 ring-ipn-primary",
+    studentSearchBar: "bg-stone-100 rounded-lg justify-center items-center gap-5 mb-4 p-5 ring-2 py-4 px-20 ring-ipn-primary",
     studentMain: "bg-stone-100 rounded-lg justify-center flex items-center gap-10 mb-4 ring-2 ring-ipn-primary",
     studentTableMain: "m-4",
     studentTableHeadStatic: "border border-gray-300 px-1 py-1 text-left...",
