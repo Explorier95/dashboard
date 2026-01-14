@@ -20,7 +20,7 @@ function StudentOverview() {
     const getQuestionOrder = () => {
         if (!sortByDifficulty) return jsonData.fragen;
 
-        // Schwierigkeit berechnen (wie in deinem TableHead)
+        // Schwierigkeit berechnen (wie in TableHead)
         return [...jsonData.fragen].map(frage => {
             const totalWrong = jsonData.schueler_antworten.filter(
                 a => a.frage_nmbr === frage.nmbr && !a.is_correct
@@ -54,6 +54,12 @@ function StudentOverview() {
         return students; // Default
     };
 
+    const getAssessmentOrder = () => {
+        // Implementierung für tutor_assessments Sortierung, falls benötigt
+        return jsonData.tutor_assessments;
+    }
+    const currentAssessment = getAssessmentOrder();
+
     const currentQuestions = getQuestionOrder();
     const currentStudents = getStudentOrder();
 
@@ -69,7 +75,8 @@ function StudentOverview() {
     return (
         <div className={ElementSquares.studentSortTableGap}>
             {info && type === "Antwort" ? <ModalAnswer info={info} onClose={closeDialog} type="Antwort" />
-                : info && type === "Frage" ? <ModalAnswer info={info} onClose={closeDialog} type="Frage" /> : ""}
+                : info && type === "Frage" ? <ModalAnswer info={info} onClose={closeDialog} type="Frage" /> :
+                    info && type === "Tutorbewertung" ? <ModalAnswer info={info} onClose={closeDialog} type="Tutorbewertung" /> : ""}
 
             <div className={ElementSquares.studentSearchBar}>
                 <h2 className={textStyles.headlineElements}>Sortieren</h2>
@@ -158,6 +165,7 @@ function StudentOverview() {
                         questions={currentQuestions}
                         answers={jsonData.schueler_antworten}
                         funktion={openDialog}
+                        assesment={currentAssessment}
                     />
                 </table>
 

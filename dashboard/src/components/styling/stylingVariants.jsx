@@ -3,6 +3,8 @@
 *All CSS-and styling-Elements are to be stored in here
 *@author Fabian Tappendorf
 */
+import sprechblase from '../../img/sprechblase.png'
+import sprechblaseColor from '../../img/sprechblase (1).png'
 
 export const textStyles = {
     headlineLargeCenter: "text-4xl font-bold bg-gradient-to-r from-blue-800 to-blue-950 bg-clip-text text-transparent text-center mb-2 drop-shadow-md",
@@ -10,7 +12,7 @@ export const textStyles = {
     headlineElements: "text-2xl font-semibold text-ipn-text mb-2 text-center drop-shadow-md",
     headlineInnerElementAlignLeft: "text-xl font-semibold text-ipn-text text-left",
     headlineElementsAlignLeft: "text-2xl font-semibold text-ipn-text mb-1 text-left",
-    paragraph: "text-base text-ipn-text",
+    paragraph: "text-base text-ipn-text whitespace-pre-wrap",
     buttonPrimary: "bg-ipn-primary text-white px-4 py-2 rounded hover:bg-blue-700",
     buttonSecondary: "bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400"
 }
@@ -36,7 +38,7 @@ export const ColorSquare = {
 }
 
 export const gridElements = {
-    main:"grid auto-rows grid-cols-2 gap-4 mx-40",
+    main: "grid auto-rows grid-cols-2 gap-4 mx-40",
     flex: "flex flex-col mt-4 mb-8 flex-qrap gap-4 ",
     grid: "relative grid grid-cols-2 auto-rows-min gap-4 ",
     gridAlt: "grid grid-cols-2 grid-flow-col auto-rows-max auto-rows-max gap-6 bg-slate-800",
@@ -60,11 +62,12 @@ export const ElementSquares = {
 
     //studentOverview  content
     studentSortTableGap: "grid gap-4 mb-2 ",
-    studentSearchBar: "bg-stone-100 rounded-lg justify-center items-center gap-5 mb-4 p-5 ring-2 py-4 px-20 ring-ipn-primary",
+    studentSearchBar: "bg-stone-100 rounded-lg justify-center items-center gap-5 mb-4 p-5 ring-2 py-4 px-8 ring-ipn-primary",
     studentMain: "bg-stone-100 rounded-lg justify-center flex items-center gap-10 mb-4 ring-2 ring-ipn-primary",
     studentTableMain: "m-4",
     studentTableHeadStatic: "border border-gray-300 px-1 py-1 text-left...",
     studentTableData: "text-center text-sm",
+    speakBubbleImage: "w-6.5 h-6.5",
 
     //heading with explanation
     studentTableHeaderDiv: "flex items-center gap-1 m-2",
@@ -75,6 +78,25 @@ export const ElementSquares = {
     //checkbox
     checkboxAccent: "bg-ipn-dark"
 }
+//*---------------------------------- Components ----------------------------------*/
+export function buttonInfoAssessment(assesment, funktion, length) {
+    let assessmentText = ""
+
+    if (assesment === undefined || assesment.tutor_text === null || assesment.length < 0) {
+        console.log("Kein Assessment vorhanden");
+    } 
+    return (
+        <button
+        type='button'
+        style={{ border: 'none', background: 'transparent', cursor: 'pointer' }} 
+        onClick={() => { console.log(assesment); funktion(assesment, "Tutorbewertung"); }}>
+            <img className={ElementSquares.speakBubbleImage} src={sprechblaseColor} alt="Picture error"></img>
+            <span style={{ fontSize: '0.8em', marginLeft: '5px' }}>
+                ({length})
+            </span>
+        </button>
+    )
+}
 
 export function SquareColor(antwort, funktion) {
 
@@ -83,8 +105,8 @@ export function SquareColor(antwort, funktion) {
 
     if (antwort === undefined) {
         classNameTmp = ColorSquare.grey;
-        console.log("undefined Antwort in SquareColor" );
-    }else if (antwort.under_help && antwort.is_correct) {
+        console.log("undefined Antwort in SquareColor");
+    } else if (antwort.under_help && antwort.is_correct) {
         classNameTmp = ColorSquare.yellow;
     } else if (!antwort.is_correct && antwort.under_help) {
         classNameTmp = ColorSquare.red;
@@ -94,12 +116,12 @@ export function SquareColor(antwort, funktion) {
         classNameTmp = ColorSquare.red;
     }
 
-    if(antwort !== undefined){
-         studentText = antwort.student_text
-    }else{
-         studentText = "Keine Antwort vorhanden"
+    if (antwort !== undefined) {
+        studentText = antwort.student_text
+    } else {
+        studentText = "Keine Antwort vorhanden"
     }
-    
+
     return (
         <button onClick={() => funktion(studentText, "Antwort")}
             className={classNameTmp}></button>

@@ -8,6 +8,9 @@ import Concepts from "./components/main/Concepts.jsx";
 import Akkordeon from "./components/main/Akkordeon.jsx";
 import summaryData from "./static/summaryData.json";
 import { useState } from "react";
+import imgGeminiOne from "./img/Gemini_Generated_Image_.png";
+import imgGeminiTwo from "./img/Gemini_Generated_Image_2.png";
+import imgGeminiThree from "./img/Gemini_Generated_Image_3.png";
 /*
 *@description
 *Main application for the IPN-Dashboard
@@ -82,9 +85,9 @@ const App = () => {
           </Layout>
 
         </div>
-        : activeView === "focus" ? <p>HIER IST DER FOKUS!</p>
-          : activeView === "conversation" ? <p>HIER SIND DIE KONVERSATIONEN!</p>
-            : <p>KEIN KNOPF GEDRÜCKT</p>}
+        : activeView === "focus" ? <><img src={imgGeminiTwo}/><p>Bild generiert von Google Gemini</p></>
+          : activeView === "conversation" ? <><img src={imgGeminiThree}/><p>Bild generiert von Google Gemini</p></>
+            : <><img src={imgGeminiOne}/><p>Bild generiert von Google Gemini</p></>}
       {/* Text */}
       <DynamixText />
 
