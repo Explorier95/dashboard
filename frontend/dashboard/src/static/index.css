@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Syntax-Reg';
+    src: url('./assets/fonts/syntax.woff2') format("woff2"),
+         url('./assets/fonts/syntax.woff') format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Syntax-Bol';
+    src: url('./assets/fonts/syntax-bold.woff2') format("woff2"),
+         url('./assets/fonts/syntax-bold.woff') format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@theme {
+
+  --font-syntax: "Syntax-Reg", ui-sans-serif, system-ui, sans-serif;
+  --font-syntax-bold: "Syntax-Bol", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ipn-blue: #003d7c;
+  --color-ipn-lightblue: rgba(0, 61, 124, 0.7);
+  --color-ipn-lighter: #ccd9e5;
+  --color-ipn-text: rgba(0, 0, 0, 0.87);
+  --color-ipn-grey: #cccccc;
+
+  --color-ipn-dark: #0D2345;
+  --color-ipn-primary: #006BA6;
+  --color-ipn-bg: #F7F8FA;
+  --color-ipn-text: #1F2833;
+  --color-ipn-light: #FFFFFF;
+  --color-ipn-accent: #F39C12;
+  --color-ipn-right: #28A745;
+  --color-ipn-wrong: #DC3545;
+  --color-ipn-right-with-help: #FFC107;
+  --color-ipn-tutor-chat: #e6f0f8;
+
+}
+
+@layer base {
+    main{
+        @apply font-syntax text-ipn-text antialiased;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    h1, h2, h3, h4 {
+        @apply font-syntax-bold text-ipn-blue;
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        @apply leading-relaxed;
+    }
+
+    button {
+        @apply cursor-pointer transition-all duration-300;
+    }
+}
+
+@layer components {
+  .masonry-grid {
+    display: flex;
+    margin-left: -16px; /* gutter ausgleichen */
+    width: auto;
+  }
+
+  .masonry-grid_column {
+    padding-left: 16px; /* gutter */
+    background-clip: padding-box;
+  }
+
+  .masonry-grid_column > div {
+    margin-bottom: 16px; /* Abstand zwischen Kacheln */
+  }
+}

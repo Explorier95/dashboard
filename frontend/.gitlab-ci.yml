@@ -1,0 +1,64 @@
+stages:
+  - prepare
+  - build
+  - deploy
+  - rollout
+
+include:
+  - project: ipn/it/administration/helper-images
+    ref: main
+    file: /pipelines/download_dockerfile.gitlab-ci.yml
+  - project: ipn/it/administration/helper-images
+    ref: main   # oder ein Tag/Commit
+    file: /pipelines/kaniko-nexus.gitlab-ci.yml
+  - project: ipn/it/administration/helper-images
+    ref: main   # oder ein Tag/Commit
+    file: /pipelines/kube_version_rollout.gitlab-ci.yml
+  - project: ipn/it/administration/helper-images
+    ref: main   # oder ein Tag/Commit
+    file: /pipelines/kaniko-nexus-ipnrz01-deploy.gitlab-ci.yml
+  - project: ipn/it/administration/helper-images
+    ref: main   # oder ein Tag/Commit
+    file: /pipelines/rollout_ipnrz01.gitlab-ci.yml
+
+download_s2i:
+  extends: .download-s2i-dockerfile
+  stage: prepare
+  variables:
+    BUILDER_DOCKERFILE: yarn-nginx.Dockerfile
+    DOCKERFILE_NAME: dashboard/Dockerfile
+
+build_test_image:
+  extends: .build_for_nexus
+  stage: build
+  variables:
+    DOCKERFILE_LOCATION: Dockerfile
+    IMAGE_NAME: cba-dashboard
+    IMAGE_TAG: $CI_COMMIT_BRANCH
+    CI_PROJECT_DIR : dashboard/
+
+rollout_dev_kube:
+  extends: .deploy_kube
+  stage: deploy
+  variables:
+    DEPLOYMENT_NAME: cba-dashboard-deployment
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "dev"'
+
+deploy_ipnrz:
+  extends: .deploy_from_nexus_to_ipnrz01
+  stage: deploy
+  variables:
+    IMAGE_TAG: main
+    IMAGE_NAME: cba-dashboard
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+
+rollout_ipnrz:
+  extends: .rollout_ipnrz01
+  stage: rollout
+  variables:
+    DEPLOYMENT_NAME: cba-dashboard-deployment
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      when: manual

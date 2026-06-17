@@ -1,0 +1,38 @@
+/*
+Font: 		Syntax
+Style: 		Regular
+URL: 		https://www.youworkforthem.com/font/T1162/syntax
+Foundry: 	URW++
+Foundry: 	https://www.youworkforthem.com/designer/204/urw
+Copyright:	Copyright 2010 URW++ Design & Development
+Version: 	17
+Created:	March 20, 2015
+License: 	https://www.youworkforthem.com/font-license
+License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
+			WebFont license rules. All other parties are strictly restricted
+			from using the WebFonts(s) listed without a purchased license.
+			All details above must always remain unaltered and visible in your CSS.
+*/
+
+@font-face {
+  font-family: 'Syntax-Reg';
+  font-style: normal;
+  font-weight: normal;
+  src: url('syntax.eot');
+  src: url('syntax.eot?#iefix') format('embedded-opentype'),
+    url('syntax.woff2') format('woff2'), url('syntax.woff') format('woff'),
+    url('syntax.ttf') format('truetype'),
+    url('syntax.svg#youworkforthem') format('svg');
+}
+
+@font-face {
+  font-family: 'Syntax-Bol';
+  font-style: normal;
+  font-weight: normal;
+  src: url('syntax-bold.eot');
+  src: url('syntax-bold.eot?#iefix') format('embedded-opentype'),
+    url('syntax-bold.woff2') format('woff2'),
+    url('syntax-bold.woff') format('woff'),
+    url('syntax-bold.ttf') format('truetype'),
+    url('syntax-bold.svg#youworkforthem') format('svg');
+}
