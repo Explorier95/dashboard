@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Dashboard() {
-  const [avsData, setAvsData] = useState([]);
+  const [aufgaben, setAufgaben] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Nur noch ein einziger Fetch auf den AVS-Endpunkt
-    fetch('http://localhost:8080/api/avs')
+    fetch('http://localhost:8080/api/aufgabenpool')
       .then(response => {
         if (!response.ok) {
           throw new Error('Netzwerkantwort war nicht ok');
@@ -14,59 +14,61 @@ export default function Dashboard() {
         return response.json();
       })
       .then(data => {
-        setAvsData(data);
+        setAufgaben(data);
         setIsLoading(false);
       })
       .catch(error => {
-        console.error("Fehler beim Laden der AVS-Daten:", error);
+        console.error("Fehler beim Laden der Aufgabenpool-Daten:", error);
+        setError(error.message);
         setIsLoading(false);
       });
   }, []);
 
-  if (isLoading) return <div className="p-6 text-gray-500">Lade Dialog-Daten...</div>;
+  if (isLoading) return <div className="p-6 text-gray-500">Lade Aufgabenpool...</div>;
 
   return (
-    <div className="p-6 max-w-5xl mx-auto">
-      <h1 className="text-2xl font-bold mb-6 text-gray-800">Chatbot Analyse-Schnittstelle (AVS)</h1>
-      
-      <div className="grid gap-4">
-        {avsData.map((item) => (
-          <div key={item.id} className="p-4 border border-gray-200 rounded-lg shadow-sm bg-white flex flex-col gap-2">
-            
-            <div className="flex justify-between items-center border-b pb-2">
-              <span className="font-semibold text-blue-600">
-                Sprecher: {item.speakerName || 'Unbekannt'}
-              </span>
-              <span className={`text-xs px-2 py-1 rounded-full ${
-                item.status === 'aktiv' ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800'
-              }`}>
-                {item.status || 'Kein Status'}
-              </span>
-            </div>
+    <div className="p-6 max-w-6xl mx-auto">
+      <h1 className="text-2xl font-bold mb-6 text-gray-800">Aufgabenpool</h1>
 
-            <div className="mt-2">
-              <p className="text-sm text-gray-500 uppercase tracking-wider font-semibold">Dialog-Text</p>
-              <p className="text-gray-800 bg-gray-50 p-3 rounded mt-1 font-serif">
-                "{item.text}"
-              </p>
-            </div>
+      {error && (
+        <p className="text-red-600 italic p-4 bg-red-50 rounded border border-red-100 mb-4">
+          Fehler beim Laden: {error}
+        </p>
+      )}
 
-            {item.dialogstepEvaluation && (
-              <div className="mt-2 bg-blue-50 p-3 rounded border border-blue-100">
-                <p className="text-sm text-blue-800 font-semibold mb-1">KI-Evaluation des Schritts:</p>
-                <p className="text-sm text-gray-700">{item.dialogstepEvaluation}</p>
-              </div>
-            )}
-            
-            <div className="text-xs text-gray-400 mt-2 text-right">
-              VPID (ID): {item.id}
-            </div>
-          </div>
-        ))}
+      <div className="overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200">
+        <table className="min-w-full text-sm text-left">
+          <thead className="bg-gray-50 text-gray-600 uppercase text-xs tracking-wider">
+            <tr>
+              <th className="px-4 py-3">ID</th>
+              <th className="px-4 py-3">Thema</th>
+              <th className="px-4 py-3">Schwierigkeit</th>
+              <th className="px-4 py-3">Frage</th>
+              <th className="px-4 py-3">Lösung</th>
+              <th className="px-4 py-3">Quelle</th>
+              <th className="px-4 py-3">Erstellt am</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-gray-100">
+            {aufgaben.map((item) => (
+              <tr key={item.id} className="hover:bg-gray-50 align-top">
+                <td className="px-4 py-3 text-gray-400">{item.id}</td>
+                <td className="px-4 py-3 font-semibold text-blue-600">{item.thema || '-'}</td>
+                <td className="px-4 py-3">{item.schwierigkeit || '-'}</td>
+                <td className="px-4 py-3 max-w-xs whitespace-pre-wrap">{item.frage || '-'}</td>
+                <td className="px-4 py-3 max-w-xs whitespace-pre-wrap">{item.loesung || '-'}</td>
+                <td className="px-4 py-3">{item.quelle || '-'}</td>
+                <td className="px-4 py-3 text-gray-400 whitespace-nowrap">
+                  {item.erstelltAm ? new Date(item.erstelltAm).toLocaleString('de-DE') : '-'}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
 
-        {avsData.length === 0 && (
-          <p className="text-gray-500 italic p-4 bg-gray-50 rounded border">
-            Keine AVS-Daten in der Datenbank gefunden.
+        {aufgaben.length === 0 && (
+          <p className="text-gray-500 italic p-4">
+            Keine Aufgaben im Aufgabenpool gefunden.
           </p>
         )}
       </div>

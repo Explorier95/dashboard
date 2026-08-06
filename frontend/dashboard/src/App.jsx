@@ -19,6 +19,9 @@ import Dashboard from "./examples/Dashboard.jsx";
 //import { StudentFocus } from "./components/main/StudentFocus.jsx";
 import { StudentFocus } from "./components/main/StudentFocus2.jsx";
 import { Conversation } from "./components/main/Conversation.jsx";
+import KnowledgebaseUpload from "./components/main/KnowledgebaseUpload.jsx";
+import { useAuth } from "./context/AuthContext.jsx";
+import AuthPage from "./components/auth/AuthPage.jsx";
 /*
 *@description
 *Main application for the IPN-Dashboard
@@ -32,6 +35,7 @@ const breakpointColumnsObj = {
 };
 
 const App = () => {
+  const { currentUser, loading, logout } = useAuth();
 
   const akkordeonDataFromJSON = summaryData;
   const [activeView, setActiveView] = useState("landing");
@@ -40,10 +44,35 @@ const App = () => {
     setActiveView(prevView => prevView === viewName ? "landing" : viewName);
   };
 
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center text-slate-500">
+        Lädt...
+      </div>
+    );
+  }
+
+  if (!currentUser) {
+    return <AuthPage />;
+  }
+
+  // Schüler haben serverseitig nur Zugriff auf den Chat (siehe SecurityConfig im Backend) -
+  // die restliche Navigation wird hier konsequent gar nicht erst gerendert.
+  if (currentUser.role === "STUDENT") {
+    return (
+      <>
+        <Header currentUser={currentUser} onLogout={logout} />
+        <main>
+          <QuizChat />
+        </main>
+      </>
+    );
+  }
+
   return (
     <>
       {/* Importet Component */}
-      <Header />
+      <Header currentUser={currentUser} onLogout={logout} />
 
       {/* Selection  */}
       <div className={ElementSquares.selectionBody}>
@@ -79,24 +108,32 @@ const App = () => {
           Chat
         </button>
                 <button
-          className={`${ElementSquares.selectionDataBase} ${activeView === "test" ? ElementSquares.selectionDataActive : ElementSquares.selectionDataInactive
+          className={`${ElementSquares.selectionDataBase} ${activeView === "aufgabenpool" ? ElementSquares.selectionDataActive : ElementSquares.selectionDataInactive
             }`}
-          onClick={() => toggleView('test')}
+          onClick={() => toggleView('aufgabenpool')}
         >
-          Test
+          Aufgabenpool
+        </button>
+
+        <button
+          className={`${ElementSquares.selectionDataBase} ${activeView === "knowledgebase" ? ElementSquares.selectionDataActive : ElementSquares.selectionDataInactive
+            }`}
+          onClick={() => toggleView('knowledgebase')}
+        >
+          Wissensdatenbank
         </button>
       </div>
       <main>
         {activeView === "landing" && (
           <LandingMinimal
             onSelectView={setActiveView}
-            teacherName="XY"
+            teacherName={currentUser.displayName || currentUser.username}
             classLabel="10a"
           />
         )}
 
         {activeView === 'overview' && <div className="flex h-[700px] w-full max-w-6xl mx-auto bg-white rounded-xl shadow-2xl overflow-scroll border border-gray-200">
-        
+
         <Masonry
           breakpointCols={breakpointColumnsObj}
           className="flex w-auto mx-40 pt-4"
@@ -104,7 +141,7 @@ const App = () => {
         >
 
           {/* Dashboard Section */}
-         
+
 
           {activeView === 'overview' &&
             <StudentOverview data={jsonData} />}
@@ -138,7 +175,7 @@ const App = () => {
             <AskAI
 
             />}
-        
+
 
 
       </Masonry>
@@ -146,12 +183,13 @@ const App = () => {
       }
       {activeView === "overview" ? <></> : activeView === "focus" ? <><StudentFocus data={jsonData} /></>
         : activeView === "conversation" ? <><Conversation data={jsonData} /></>
-        : activeView === "test" ? <><Dashboard/></>
+        : activeView === "aufgabenpool" ? <><Dashboard/></>
         : activeView ==="chat" ? <><QuizChat/></>
+        : activeView === "knowledgebase" ? <><KnowledgebaseUpload/></>
           : <></>}
     </main >
 </>
-    
+
   );
 };
 

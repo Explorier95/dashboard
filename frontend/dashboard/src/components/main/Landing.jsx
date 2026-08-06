@@ -2,7 +2,7 @@ import React from "react";
 
 export default function LandingMinimal({
   onSelectView,
-  teacherName = "XY",
+  teacherName,
   classLabel = "10a",
 }) {
   return (

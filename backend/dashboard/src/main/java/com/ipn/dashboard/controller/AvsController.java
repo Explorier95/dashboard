@@ -7,8 +7,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/avs")
-@CrossOrigin(origins = "*") // Dein React-Port muss für Produktiv angepasst werden.
-
 public class AvsController {
 
     private final AvsRepository avsRepository;
