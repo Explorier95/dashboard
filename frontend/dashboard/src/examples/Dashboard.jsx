@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { apiFetch } from '../api/client';
 
 export default function Dashboard() {
   const [aufgaben, setAufgaben] = useState([]);
@@ -6,13 +7,7 @@ export default function Dashboard() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/aufgabenpool')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Netzwerkantwort war nicht ok');
-        }
-        return response.json();
-      })
+    apiFetch('/api/aufgabenpool')
       .then(data => {
         setAufgaben(data);
         setIsLoading(false);

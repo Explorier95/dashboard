@@ -9,7 +9,7 @@ import java.time.OffsetDateTime;
 // bleibt bewusst ungesetzt (nullable) - die volle Session/CBA/Aufgabenpool-Verzahnung
 // ist ein groesseres, hier nicht angefragtes Feature.
 @Entity
-@Table(name = "`Chat_messages`")
+@Table(name = "chat_messages")
 public class ChatMessage {
 
     @Id

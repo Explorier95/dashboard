@@ -11,8 +11,11 @@ public record EvaluationResponse(
         String studentUsername,
         Integer teacherId,
         String teacherUsername,
+        Integer aufgabeId,
+        String antwort,
         BigDecimal score,
         String feedback,
+        Boolean usedHint,
         OffsetDateTime createdAt
 ) {
     public static EvaluationResponse from(Evaluation evaluation) {
@@ -22,8 +25,11 @@ public record EvaluationResponse(
                 evaluation.getStudent().getUsername(),
                 evaluation.getTeacher() != null ? evaluation.getTeacher().getId() : null,
                 evaluation.getTeacher() != null ? evaluation.getTeacher().getUsername() : null,
+                evaluation.getAufgabeId(),
+                evaluation.getAntwort(),
                 evaluation.getScore(),
                 evaluation.getFeedback(),
+                evaluation.getUsedHint(),
                 evaluation.getCreatedAt()
         );
     }

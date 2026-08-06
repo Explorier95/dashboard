@@ -181,8 +181,8 @@ const App = () => {
       </Masonry>
       </div>
       }
-      {activeView === "overview" ? <></> : activeView === "focus" ? <><StudentFocus data={jsonData} /></>
-        : activeView === "conversation" ? <><Conversation data={jsonData} /></>
+      {activeView === "overview" ? <></> : activeView === "focus" ? <><StudentFocus /></>
+        : activeView === "conversation" ? <><Conversation /></>
         : activeView === "aufgabenpool" ? <><Dashboard/></>
         : activeView ==="chat" ? <><QuizChat/></>
         : activeView === "knowledgebase" ? <><KnowledgebaseUpload/></>

@@ -45,6 +45,7 @@ public class EvaluationController {
         evaluation.setTeacher(teacher);
         evaluation.setScore(request.score());
         evaluation.setFeedback(request.feedback());
+        evaluation.setUsedHint(request.usedHint());
 
         Evaluation saved = evaluationRepository.save(evaluation);
         return ResponseEntity.status(HttpStatus.CREATED).body(EvaluationResponse.from(saved));

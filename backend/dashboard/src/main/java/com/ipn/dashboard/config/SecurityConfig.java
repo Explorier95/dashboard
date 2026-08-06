@@ -64,6 +64,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/aufgabenpool/**").hasRole("TEACHER")
                         .requestMatchers("/api/knowledgebase/**").hasRole("TEACHER")
                         .requestMatchers("/api/avs/**").hasRole("TEACHER")
+                        .requestMatchers("/api/users/**").hasRole("TEACHER")
                         .anyRequest().authenticated()
                 )
                 // setStatus() statt sendError(): sendError() loest in Tomcat einen internen

@@ -36,6 +36,11 @@ public class Evaluation {
     @Column(name = "feedback", columnDefinition = "TEXT")
     private String feedback;
 
+    // NULL = unbekannt (nicht "nein") - aktuell schreibt weder unser Backend automatisch
+    // noch der n8n-Workflow einen Wert hierhin, siehe V3-Migration.
+    @Column(name = "used_hint")
+    private Boolean usedHint;
+
     @Column(name = "erstellt_am", nullable = false)
     private OffsetDateTime createdAt;
 
@@ -66,6 +71,9 @@ public class Evaluation {
 
     public String getFeedback() { return feedback; }
     public void setFeedback(String feedback) { this.feedback = feedback; }
+
+    public Boolean getUsedHint() { return usedHint; }
+    public void setUsedHint(Boolean usedHint) { this.usedHint = usedHint; }
 
     public OffsetDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(OffsetDateTime createdAt) { this.createdAt = createdAt; }

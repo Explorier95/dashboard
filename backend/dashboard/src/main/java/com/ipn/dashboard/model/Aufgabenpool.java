@@ -9,7 +9,7 @@ import java.time.OffsetDateTime;
 // wie zuvor (z.B. "frage" statt "aufgabe"), damit die bestehende Frontend-Ansicht
 // (Dashboard.jsx) unveraendert funktioniert - nur das @Column-Mapping wechselt.
 @Entity
-@Table(name = "`Aufgabenpool`")
+@Table(name = "aufgabenpool")
 public class Aufgabenpool {
 
     @Id

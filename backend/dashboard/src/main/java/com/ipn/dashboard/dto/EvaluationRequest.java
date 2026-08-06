@@ -8,5 +8,6 @@ import java.math.BigDecimal;
 public record EvaluationRequest(
         @NotNull Integer studentId,
         @NotNull @DecimalMin(value = "0", inclusive = true) BigDecimal score,
-        String feedback
+        String feedback,
+        Boolean usedHint
 ) {}
